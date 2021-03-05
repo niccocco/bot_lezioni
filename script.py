@@ -258,7 +258,7 @@ for i in range(len(h)):
     for j in range(len(h[i]["prenotazioni"])):
         #print(h[i]["prenotazioni"][j])
         #print("AAAAAAA#######AAAAAAA\n")
-        if (h[i]["prenotazioni"][j]["prenotabile"]) and (h[i]["prenotazioni"][j]["prenotata"] is True) and (h[i]["prenotazioni"][j]["aula"] != "Aula Informatica 112 (la lezione si svolge anche nelle aule:Aula Informatica 112)"): # cioè se è prenotabile e non prenotata
+        if (h[i]["prenotazioni"][j]["prenotabile"]) and (h[i]["prenotazioni"][j]["prenotata"] is False) and (h[i]["prenotazioni"][j]["aula"] != "Aula Informatica 112 (la lezione si svolge anche nelle aule:Aula Informatica 112)"): # cioè se è prenotabile e non prenotata
             print(h[i]["prenotazioni"][j]["nome"] + " è prenotabile")
             print(h[i]["prenotazioni"][j]["nome"] + "nell'" + h[i]["prenotazioni"][j]["aula"])
 
