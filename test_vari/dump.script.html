@@ -1,0 +1,2076 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html>
+<html lang="it" xml:lang="it" >
+	<head>
+		<!-- <meta charset="utf-8"> -->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+		<link rel='stylesheet' href='assets/css/plugins/fullcalendar.css'>
+		<link rel='stylesheet' href='assets/css/plugins/datatables/datatables.css'>
+		<link rel='stylesheet' href='assets/css/plugins/datatables/bootstrap.datatables.css'>
+		<link rel='stylesheet' href='assets/css/plugins/chosen.css'>
+		<link rel='stylesheet' href='assets/css/plugins/jquery.timepicker.css'>
+		<link rel='stylesheet' href='assets/css/plugins/daterangepicker-bs3.css'>
+		<link rel='stylesheet' href='assets/css/plugins/colpick.css'>
+		<link rel='stylesheet' href='assets/css/plugins/dropzone.css'>
+		<link rel='stylesheet' href='assets/css/plugins/jquery.handsontable.full.css'>
+		<link rel='stylesheet' href='assets/css/plugins/jscrollpane.css'>
+		<link rel='stylesheet' href='assets/css/plugins/jquery.pnotify.default.css'>
+		<link rel='stylesheet' href='assets/css/plugins/jquery.pnotify.default.icons.css'>
+		<link rel="stylesheet" href="assets/css/plugins/switchery.min.css"/>
+		<link rel='stylesheet' href='assets/css/app.css'>
+		<!--<link href="assets/fonts/font-awesome-5.9.0/all.css" rel="stylesheet"> load all styles -->
+		<link href='css/font-awesome.css' rel='stylesheet' type='text/css'>
+		 <!--<link href="assets/fonts/fontawesome5/css/all.css" rel="stylesheet">load all styles -->
+		
+
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/schedule.css" rel="stylesheet" type="text/css">
+		<link href="css/thesis.css" rel="stylesheet" type="text/css">
+		<link href="css/test.css" rel="stylesheet" type="text/css">
+		<link href="css/testER.css" rel="stylesheet" type="text/css">
+		<link href="css/rooms.css" rel="stylesheet" type="text/css">
+		<link href="css/bookings.css" rel="stylesheet" type="text/css">
+		<link href="css/login.css" rel="stylesheet" type="text/css">
+		<link href="css/presenze.css" rel="stylesheet" type="text/css">
+		<link href="css/libretto.css" rel="stylesheet" type="text/css">
+		<link href="js/magnificpopup/magnific-popup.css" rel="stylesheet" type="text/css">
+		<link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+		<link href="css/morris.css" rel="stylesheet" type="text/css">
+		
+		<link rel="shortcut icon" type="image/png" href="customer/favicon.jpg"/>
+  
+		<script src="assets/js/plugins/switchery.min.js"></script>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/raphael-min.js"></script>
+		<script src="js/morris.min.js"></script>
+		<script src="js/schedule/common_grid_functions.js"></script>
+		
+		<script>
+			// lettura del config
+							
+					var university = "unifi";
+			
+							
+					var university_name = "Università degli Studi di Firenze";
+			
+							
+					var university_link = "https://www.unifi.it/";
+			
+							
+					var url_agenda = "https://kairos.unifi.it/agendaweb/";
+			
+							
+					var titolo_messaggio_home_it = "Benvenuto nell'Agenda WEB dell'Università degli Studi di Firenze";
+			
+							
+					var titolo_messaggio_home_en = "Welcome to the student's Web Agenda of the University of Florence";
+			
+							
+					var titolo_messaggio_home_es = "Bienvenido a la Agenda WEB de los Estudiantes de la Universidad de Firenze";
+			
+							
+					var home_customer_msg_it = "";
+			
+							
+					var home_customer_msg_es = "";
+			
+							
+					var home_customer_msg_en = "";
+			
+							
+					var title_page_customer_it = "";
+			
+							
+					var title_page_customer_es = "";
+			
+							
+					var title_page_customer_en = "";
+			
+							
+					var login_customer_msg_it = "Per poter effettuare l'accesso al sistema di prenotazione del posto a lezione devi usare la tua matricola numerica (ad esempio: 1234567) che ti è stata comunicata all'atto dell'immatricolazione online, e la tua password.";
+			
+							
+					var login_customer_msg_es = "In order to access system to book your seat in a classroom you need to use your student number and password.";
+			
+							
+					var login_customer_msg_en = "In order to access system to book your seat in a classroom you need to use your student number and password.";
+			
+							
+					var streaming_label = "streaming";
+			
+							
+					var link_informativa_cookies = "";
+			
+							
+					var powered = "Powered by EasyStaff - 2020";
+			
+							
+					var msg_aggiornamento_it = "";
+			
+							
+					var msg_aggiornamento_es = "";
+			
+							
+					var msg_aggiornamento_en = "";
+			
+							
+					var customer_footer = "";
+			
+							
+					var auth_method = "oauth2";
+			
+							
+					var call_login = "";
+			
+							
+					var call_libretto = "";
+			
+							
+					var call_corsi = "";
+			
+							
+					var call_timbrature = "";
+			
+							
+					var easybadge_data_dir = "";
+			
+							
+					var call_login_oauth2 = "https://kairos.unifi.it/auth/auth_app_test.php";
+			
+							
+					var call_logout_oauth2 = "";
+			
+							
+					var proxy_address = "";
+			
+							
+					var redis = "1";
+			
+							
+					var redis_mode = "local";
+			
+							
+					var redis_external_dir_1 = "https://gestionedidattica.unipd.it/AgendaWeb/AgendaWeb/Orario/App/";
+			
+							
+					var redis_external_dir_2 = "https://gestionedidattica.unipd.it/AgendaWeb/AgendaWeb/Orario/App/";
+			
+							
+					var new_combo = "1";
+			
+							
+					var DASHBOARD = "1";
+			
+							
+					var DASHBOARD_DEMO = "0";
+			
+							
+					var username_demo = "";
+			
+							
+					var password_demo = "";
+			
+							
+					var CONFIG_GENERAL_HUNIMED_APP = "1";
+			
+							
+					var CONFIG_GENERAL_HUNIMED_APP_DESCR = "0";
+			
+							
+					var CONFIG_GENERAL_HUNIMED_APP_ETER = "0";
+			
+							
+					var tipologia_insegnamento_attiva = "0";
+			
+							
+					var portale_EC = "1";
+			
+							
+					var portale_ET = "0";
+			
+							
+					var portale_ET_ER = "0";
+			
+							
+					var portale_ET_BOK = "0";
+			
+							
+					var portale_ETH = "0";
+			
+							
+					var portale_EB = "0";
+			
+							
+					var portale_TEACHER = "0";
+			
+							
+					var scheda_aule = "1";
+			
+							
+					var scheda_booking = "1";
+			
+							
+					var external_link_ec = "";
+			
+							
+					var dashboard_il_mio_orario = "0";
+			
+							
+					var dashboard_libretto = "0";
+			
+							
+					var link_eventi_ateneo = "";
+			
+							
+					var titolo_homepage_eventi_ateneo_it = "Calendario eventi di ateneo";
+			
+							
+					var titolo_homepage_eventi_ateneo_es = "Calendario eventi di ateneo";
+			
+							
+					var titolo_homepage_eventi_ateneo_en = "Calendario eventi di ateneo";
+			
+							
+					var portale_AULESTUDIO = "0";
+			
+							
+					var link_rest_aulestudio = "https://demo.easystaff.it/aulestudio/api/lista_aule";
+			
+							
+					var portale_GRUPPISTUDENTI = "0";
+			
+							
+					var portale_EASYLESSON = "1";
+			
+							
+					var link_informativa_privacy = "https://www.unifi.it/p11360";
+			
+							
+					var link_informativa_easylesson = "https://www.unifi.it/p11875";
+			
+							
+					var easylesson_api_cdl_periodi_didattici = "https://kairos.unifi.it/agendaweb/api_cdl_periodi_didattici.php?&aa=%s";
+			
+							
+					var easylesson_api_lista_insegnamenti = "https://kairos.unifi.it/agendaweb/api_lista_insegnamenti.php?";
+			
+							
+					var easylesson_api_salva_insegnamenti = "https://kairos.unifi.it/easylesson/api/salva_insegnamenti";
+			
+							
+					var easylesson_api_leggi_insegnamenti = "https://kairos.unifi.it/easylesson/api/leggi_insegnamenti/%s";
+			
+							
+					var easylesson_api_lezioni_prenotabili = "https://kairos.unifi.it/easylesson/api/lezioni_prenotabili/%s";
+			
+							
+					var easylesson_api_salva_prenotazioni = "https://kairos.unifi.it/easylesson/api/salva_prenotazioni";
+			
+							
+					var easylesson_api_lezioni_prenotate = "https://kairos.unifi.it/easylesson/api/lezioni_prenotate/%s";
+			
+							
+					var easylesson_api_cancella_prenotazioni = "https://kairos.unifi.it/easylesson/api/cancella_prenotazioni";
+			
+							
+					var easylesson_api_rileva_presenza = "https://kairos.unifi.it/easylesson/api/rileva_presenza";
+			
+							
+					var easylesson_api_autocertificazione_presenti = "https://kairos.unifi.it/easylesson/api/autocertificazioni_presenti/%s";
+			
+							
+					var easylesson_api_salva_insegnamento_extracurricolare = "https://kairos.unifi.it/easylesson/api/salva_insegnamento_extracurricolare";
+			
+							
+					var easylesson_api_rimuovi_insegnamento_extracurricolare = "https://kairos.unifi.it/easylesson/api/rimuovi_insegnamento_extracurricolare";
+			
+							
+					var easylesson_api_black_list = "https://kairos.unifi.it/easylesson/api/blacklist-check/%s";
+			
+							
+					var easylesson_api_edit_mail = "https://kairos.unifi.it/easylesson/api/cambio-mail";
+			
+							
+					var easylesson_abilita_modifica_mail = "";
+			
+							
+					var easylesson_link_guida = "";
+			
+							
+					var easylesson_text_operation = " ";
+			
+							
+					var easylesson_export_pdf_version = "";
+			
+							
+					var scheda_app = "";
+			
+							
+					var nome_app = "MyEasyApp";
+			
+							
+					var link_android = "https://play.google.com/store/apps/details?id=it.easystaff.demo&hl=it";
+			
+							
+					var link_iphone = "https://itunes.apple.com/it/app/myeasyapp/id1222497418?mt=8";
+			
+							
+					var scheda_app_text_it = "<p>Scaricando l'app NOMEAPP avrai sempre a portata di click il tuo orario delle lezioni, il calendario degli appelli d'esame e l'occupazione giornaliera delle aule di tutte le sedi dell'università, oltre ad altre funzionalità messa a disposizione dal tuo ateneo. </p><p>Inoltre potrai ricevere le notifiche push che i docenti e le segreterie studenti invieranno per informarti di cambiamenti di aula di ultima ora, invito ad eventi e seminari, sospensioni lezioni ecc.</p>";
+			
+							
+					var scheda_app_text_en = "<p>Download the app NOMEAPP so you will always have access to your lesson timetable, the exams calendar and the classrooms of all the university daily occupation, in addition to other functionalities that your university gives to you. </p><p>You will also receive push notifications that teachers and secretariats will send to inform you about last-minute class changes, invitation to events, seminars, lecture suspensions, and so on.</p>";
+			
+							
+					var scheda_app_text_es = "<p>Descargando la applicación NOMEAPP tendràs siempre a tu disposición el horario de las clases, el calendario de las convocatorias de examen y la ocupación diaria de las aulas de todas las sedes de la universidad, además de otras funcionalidades que te ofrece tu universidad.</p><p>Además podrás recibir notificaciones push que profesores y secretarías didácticas enviarán para informarte de cambios de aula de última hora, invitaciones a eventos y seminarios, clases canceladas, etc.</p>";
+			
+							
+					var link_myportal_hunimed_it = "";
+			
+							
+					var link_myportal_hunimed_en = "";
+			
+							
+					var link_myportal_hunimed_es = "";
+			
+							
+					var label_myportal_hunimed_it = "";
+			
+							
+					var label_myportal_hunimed_en = "";
+			
+							
+					var label_myportal_hunimed_es = "";
+			
+							
+					var orario_tipo = "1";
+			
+							
+					var griglia_complessiva = "";
+			
+							
+					var aus_teacher = "1";
+			
+							
+					var aus_teacher_search = "1";
+			
+							
+					var grid_res = "";
+			
+							
+					var grid_from = "";
+			
+							
+					var grid_to = "";
+			
+							
+					var solo_obbligatori_spuntati = "";
+			
+							
+					var legenda_divisa_obbligatori = "";
+			
+							
+					var ec_grid_week_type = "0";
+			
+							
+					var contenuto_celle_ec = "nome_insegnamento,docente,aula,orario,tipo";
+			
+							
+					var contenuto_celle_ec_all = "nome_insegnamento,orario,docente,aula,tipo";
+			
+							
+					var contenuto_celle_et = "nome,docente,aula_sede,orario_completo,tipo_esame";
+			
+							
+					var et_er_titolo_evento = "";
+			
+							
+					var contenuto_celle_rooms = "nome,utenti,orario,tipo";
+			
+							
+					var escludi_tipi_rooms = "";
+			
+							
+					var ec_link_lezione_online = "link_aula";
+			
+							
+					var ec_link_lezione_label = "_lbl_link_insegnamento";
+			
+							
+					var list_eventi_solo_futuri = "1";
+			
+							
+					var rooms_eventi_didattica = "";
+			
+							
+					var mail_docente = "1";
+			
+							
+					var tel_docente = "";
+			
+							
+					var hide_menu_on_submit = "1";
+			
+							
+					var mostra_esami_annullati = "";
+			
+							
+					var eter_to_date_link_popup = "90";
+			
+							
+					var eter_curriculum_esami = "1";
+			
+							
+					var eter_legenda_custom_it = "";
+			
+							
+					var eter_legenda_custom_es = "";
+			
+							
+					var eter_legenda_custom_en = "";
+			
+							
+					var eter_colonna_cds = "1";
+			
+							
+					var autocomplete_select_anno_accademico = "1";
+			
+							
+					var autocomplete_select_anno_corso = "";
+			
+							
+					var spiegazione_multi = "1";
+			
+							
+					var select_scuola = "1";
+			
+							
+					var scuola_o_dipartimento = "scuola";
+			
+							
+					var select_cdl_code = "";
+			
+							
+					var select_docente_code = "";
+			
+							
+					var select_insegnamento_code = "";
+			
+							
+					var legend_position = "bottom";
+			
+							
+					var replica_parametri = "";
+			
+							
+					var cds_info_in_attivita = "";
+			
+							
+					var gruppo_facolta = "";
+			
+							
+					var color_gruppo_label_txt = "#015288";
+			
+							
+					var nome_gruppo_facolta1_it = "Didattica";
+			
+							
+					var nome_gruppo_facolta2_it = "International Language Centre";
+			
+							
+					var nome_gruppo_facolta1_es = "Didattica";
+			
+							
+					var nome_gruppo_facolta2_es = "International Language Centre";
+			
+							
+					var nome_gruppo_facolta1_en = "Didattica";
+			
+							
+					var nome_gruppo_facolta2_en = "International Language Centre";
+			
+							
+					var select_insegnamenti_in_cdl_1 = "";
+			
+							
+					var select_insegnamenti_in_cdl_2 = "";
+			
+							
+					var select_cdl_in_docenti = "";
+			
+							
+					var unione_lezioni_master = "";
+			
+							
+					var path_slave_files = "";
+			
+							
+					var link_slave_esterno = "";
+			
+							
+					var university_code_slave = "SSML";
+			
+							
+					var title_subsection_link_pp_to_slave_it = "Link agli orari su SSML";
+			
+							
+					var title_subsection_link_pp_to_slave_es = "Link agli orari su SSML";
+			
+							
+					var title_subsection_link_pp_to_slave_en = "Link agli orari su SSML";
+			
+							
+					var raggruppamenti_sede = "";
+			
+							
+					var label_raggruppamenti_sede = "_lbl_area_raggruppamento";
+			
+							
+					var raggruppamenti_bookings = "";
+			
+							
+					var visualizza_allegati = "1";
+			
+							
+					var conf_languages = "it,en,es";
+			
+							
+					var percorso_comune = "";
+			
+							
+					var codide_generale_esami_eter_titolo = "";
+			
+							
+					var messaggio_et_custom = "";
+			
+							
+					var bookings_teacher_search_createby = "1";
+			
+							
+					var padding_left_logo_big = "50";
+			
+							
+					var color_background_logo = "#004180";
+			
+							
+					var lang_links_top_bar = "";
+			
+							
+					var padding_top_main_content = "150";
+			
+							
+					var centered_logo = "";
+			
+							
+					var color_text_only_grid_1 = "#004180";
+			
+							
+					var color_text_only_grid_2 = "#333333";
+			
+							
+					var color_background_only_grid = "#FFFFFF";
+			
+							
+					var padding_left_menu_btn = "70";
+			
+							
+					var padding_left_title = "20";
+			
+							
+					var color_bar = "#668BB1";
+			
+							
+					var color_title = "#FFFFFF";
+			
+							
+					var font_w_title = "20";
+			
+							
+					var color_btn_cerca = "#FFFFFF";
+			
+							
+					var color_btn_cerca_txt = "#004180";
+			
+							
+					var color_titles_menu = "#004180";
+			
+							
+					var color_titles_submenu = "#4B5159";
+			
+							
+					var color_menu = "#668BB1";
+			
+							
+					var color_menu_active = "#91ACC6";
+			
+							
+					var color_sub_menu = "#D9D9D9";
+			
+							
+					var color_text_sub_menu = "#333333";
+			
+							
+					var color_div_text_sub_menu = "#333333";
+			
+							
+					var color_button = "#004180";
+			
+							
+					var color_export = "#004180";
+			
+							
+					var color_main_content = "#F2F2F2";
+			
+							
+					var color_head_table = "#D9D9D9";
+			
+							
+					var color_head_table_std_week = "#D9D9D9";
+			
+							
+					var color_text_head_table = "#4B5159";
+			
+							
+					var highlight_color_table = "#CC0066";
+			
+							
+					var color_next_prev = "#004180";
+			
+							
+					var color_head_legend = "#D9D9D9";
+			
+							
+					var color_text_head_legend = "#4B5159";
+			
+							
+					var color_check_all = "#004180";
+			
+							
+					var color_text_legend = "#000000";
+			
+							
+					var color_link_table = "#004180";
+			
+							
+					var color_hightlight = "#7FDAF4";
+			
+							
+					var color_icon_link_table = "#004180";
+			
+							
+					var color_check_table = "#008000";
+			
+							
+					var color_message_notes = "#000000";
+			
+							
+					var size_message_notes = "15";
+			
+							
+					var color_background_notes = "#F2F2F2";
+			
+							
+					var color_text_notes = "#000000";
+			
+							
+					var color_link_popup = "#4285F4";
+			
+							
+					var color_title_bar_popup = "#D9D9D9";
+			
+							
+					var color_title_text_popup = "#004180";
+			
+							
+					var color_subtitle_text_popup = "#004180";
+			
+							
+					var color_eventi_annullati = "#FFFFFF";
+			
+							
+					var color_obbligatori = "#D5FFA4";
+			
+							
+					var color_consigliati = "#EACACA";
+			
+							
+					var color_eventi_chiusure = "#BDF2F2";
+			
+							
+					var color_now_line = "#E12D32";
+			
+							
+					var color_icon_logged = "#FFFFFF";
+			
+							
+					var color_icon_not_logged = "#668BB1";
+			
+							
+					var color_icon_text = "#FFFFFF";
+			
+							
+					var color_chart_red = "#FF3333";
+			
+							
+					var color_chart_yellow = "#FFFF33";
+			
+							
+					var color_chart_green = "#99FF66";
+			
+							
+					var color_chart_assente = "#999999";
+			
+							
+					var color_chart_future = "#DDDDDD";
+			
+							
+					var color_voto_bene = "#99FF66";
+			
+							
+					var color_voto_medio = "#FFFF33";
+			
+							
+					var color_voto_scarso = "#FF3333";
+			
+							
+					var color_voto_da_fare = "#999999";
+			
+							
+					var color_voto_txt = "#000000";
+			
+							
+					var soglia_voto_bene = "28";
+			
+							
+					var soglia_voto_medio = "22";
+			
+							
+					var color_semaforo_verde = "green";
+			
+							
+					var color_semaforo_rosso = "red";
+			
+							
+					var color_semaforo_grigio = "#999999";
+			
+						
+			var _COMBO_EC = 'ec_';
+			var _COMBO_ET = 'et_';
+			var _COMBO_ROOMS = 'rooms_';
+
+
+			university = university.toUpperCase();
+			if(legend_position == '') legend_position = 'bottom';
+
+			var n_portali 	= '4';
+
+			var only_grid_str = "";
+			var only_grid = "0";
+		</script>
+
+
+
+
+		<script type="text/javascript">
+
+// label convertite in variabili js più altre utilità
+
+var lun = 'Lunedì';
+var mar = 'Martedì';
+var mer = 'Mercoledì';
+var gio = 'Giovedì';
+var ven = 'Venerdì';
+var sab = 'Sabato';
+var dom = 'Domenica';
+var week_labels_array = [lun, mar, mer, gio, ven, sab, dom];
+var week_labels_array_en = [dom, lun, mar, mer, gio, ven, sab];
+var m_gen = 'Gennaio';
+var m_feb = 'Febbraio';
+var m_mar = 'Marzo';
+var m_apr = 'Aprile';
+var m_mag = 'Maggio';
+var m_giu = 'Giugno';
+var m_lug = 'Luglio';
+var m_ago = 'Agosto';
+var m_set = 'Settembre';
+var m_ott = 'Ottobre';
+var m_nov = 'Novembre';
+var m_dic = 'Dicembre';
+var month_labels_array = [m_gen, m_feb, m_mar, m_apr, m_mag, m_giu, m_lug, m_ago, m_set, m_ott, m_nov, m_dic]; 
+
+
+var _lbl_titolo_area_EC 									= "Ricerca il tuo orario";
+var _lbl_titolo_area_ET 									= "Ricerca i tuoi esami";
+var _lbl_titolo_area_ETH 									= "Ricerca la tua seduta di laurea";
+var _lbl_titolo_area_ETH_small								= "Ricerca lauree";
+var _lbl_titolo_area_APP									= "App mobile";
+var _lbl_titolo_area_ROOMS									= "Occupazione giornaliera aule";
+var _lbl_titolo_area_BOOKING								= "Cerca prenotazioni";
+var _lbl_titolo_area_TEACHER								= "Impegni docente";
+var _lbl_titolo_area_LOGIN									= "Login";
+var _lbl_titolo_area_AULESTUDIO								= "Aule studio";
+
+var _lbl_ricerca 											= "Cerca...";
+var _lbl_per_corso_di_laurea 								= "Per corso di studio";
+var _lbl_per_docente 										= "Per docente";
+var _lbl_per_insegnamento 									= "Per insegnamento";
+var _lbl_errore_selezione_form		 		    			= "Attenzione! Riempire tutti i filtri.";
+var _lbl_errore_selezione_form_teacher_bookings 			= "Attenzione! Il campo &ldquo;Docente&rdquo; è obbligatorio per effettuare la ricerca.";
+var _lbl_selezione_nulla									= "Orario non disponibile"; 
+var _lbl_data 												= "Settimana del"; 
+var _lbl_week 												= "Settimana: "; 
+var _lbl_docente 			 								= "Docente"; 
+var _lbl_anno_accademico 	 								= "Anno accademico"; 
+var _lbl_attivita_didattica 								= "Attività didattica"; 
+var _lbl_corso_di_studio 	 								= "Corso di Studio"; 
+var _lbl_anno_di_studio 	 								= "Anno di Studio"; 
+var _lbl_mostra_orario 	 					    			= "Mostra orario"; 
+var _lbl_multiselect										= "Selezione multipla"; 
+var _lbl_date_periodi_box_uniud								= "Date periodi didattici"; 
+var _lbl_data_periodi_box_uniud								= "Date periodo didattico"; 
+var _lbl_errore_lunghezza									= "La parola chiave deve contenere almeno 3 caratteri!"; 
+var _lbl_conferma_ricerca									= "Ricerca delle prenotazioni con parola chiave <b>%keyw</b> nel titolo, nel nome dell'aula e tra gli utilizzatori nel periodo %period"; 
+var _lbl_keysearch 							    			= "Parola chiave"; 
+var _lbl_keyplaceholder						    			= "Ricerca"; 
+var _lbl_lista_insegnamenti 								= "Lista insegnamenti"; 
+var _lbl_obbligatorio										= "Insegnamenti obbligatori"; 
+var _lbl_consigliato 										= "Insegnamenti consigliati"; 
+var _lbl_select_all 		 								= "Seleziona/Deseleziona tutti"; 
+var _lbl_message_grid                           			= "<i class='fa fa-asterisk' aria-hidden></i> Un asterisco vicino al nome dell'insegnamento può indicare la presenza di una nota, di un allegato o di un link. Cliccare sulla lezione per visualizzarne il contenuto."; 
+var _lbl_message_grid_unimi 								= "In caso di ricerca nulla nel periodo didattico scelto, verificare i successivi."; 
+var _lbl_anno_comune 										= "anno comune"; 
+var _lbl_anno_comune_unimi 					    			= "insegnamenti complementari"; 
+var _lbl_anno_comune_iuav 									= "tutti gli anni di corso"; 
+var _lbl_anno_comune_uniud 					    			= "insegnamenti a scelta"; 
+var _lbl_calendar_button  									= "Eventi ad elenco"; 
+var _lbl_calendar_excel_button								= "Esporta excel"; 
+var _lbl_message_calendar 									= "Attenzione! Nella settimana selezionata non sono presenti lezioni. Di seguito la lista delle lezioni degli insegnamenti selezionati."; 
+var _lbl_message_calendar_empty				    			= "Nessuna lezione trovata."; 
+var _lbl_calendar_link   									= "Vai a orario"; 
+var _lbl_nessuna_selezione_1								= "ATTENZIONE: non hai selezionato nessun insegnamento."; 
+var _lbl_nessuna_selezione_2								= "Per selezionare un insegnamento clicca sulle checkbox della sezione Lista insegnamenti."; 
+var _lbl_legenda_calendario					    			= "questa icona indica che l'evento è già stato svolto."; 
+var _lbl_giorno 											= "Giorno"; 
+var _lbl_ora	 											= "Ora"; 
+var _lbl_corso  											= "Insegnamento"; 
+var _lbl_aula_e_sede	 									= "Aula e sede"; 
+var _lbl_next_week 							    			= "Settimana successiva"; 
+var _lbl_prev_week 							    			= "Settimana precedente"; 
+var _lbl_info_evento										= "Dettagli"; 
+var _lbl_anno 												= "%s anno"; 
+var _lbl_nome_corso 										= "Nome insegnamento"; 
+var _lbl_docenti 											= "Docenti"; 
+var _lbl_curriculum 										= "Percorso didattico"; 
+var _lbl_numero_eventi 										= "Numero eventi collegati"; 
+var _lbl_date_eventi 										= "Date eventi collegati"; 
+var _lbl_aula 												= "Aula"; 
+var _lbl_note_orario 										= "Note orario"; 
+var _lbl_note_generali 										= "Note generali: "; 
+var _lbl_note_giorno										= "Note del giorno: "; 
+var _lbl_titolo_corso										= "Argomento lezione"; 
+var _lbl_eventi 											= "eventi"; 
+var _lbl_note_evento										= "Note"; 
+var _lbl_export_excel_button 				    			= "Export Excel"; 
+var _lbl_istruzioni_excel1									= "Per stampare il file in PDF:"; 
+var _lbl_istruzioni_excel2									= "fare click su File, Stampa"; 
+var _lbl_istruzioni_excel3									= "scegliere una stampante PDF e cliccare su Stampa"; 
+var _lbl_istruzioni_excel4									= "scegliere una cartella ed un nome per il file"; 
+var _lbl_istruzioni_excel5									= "fare clic su Salva"; 
+var _lbl_export_calendar_button_week 		    			= "Esporta gli impegni settimanali sul calendario personale"; 
+var _lbl_export_calendar_button_all 						= "Esporta i seguenti impegni sul calendario personale"; 
+var _lbl_link_sito_docente 									= "(sito web)"; 
+var _lbl_link_sito_insegnamento 							= "(sito web)"; 
+var _lbl_link_maps 											= "Google Maps"; 
+var _lbl_local_map 											= "Apri mappa"; 
+var _lbl_label_back 										= "Indietro"; 
+var _lbl_mappa_assente 										= "Mappa assente"; 
+var _lbl_per_studente_eth									= "Per studente"; 
+var _lbl_per_docente_eth									= "Per docente"; 
+var _lbl_anno_accademico_eth 								= "Anno accademico"; 
+var _lbl_sessione_di_laurea_eth 							= "Sessione di laurea"; 
+var _lbl_matricola_studente_eth 							= "Matricola studente"; 
+var _lbl_docente_eth			 							= "Docente"; 
+var _lbl_mostra_sessione_eth								= "Mostra sessione"; 
+var _lbl_presidente_eth						    			= "Presidente"; 
+var _lbl_commissione_eth 									= "Commissione"; 
+var _lbl_supplenti_eth 						    			= "Supplenti"; 
+var _lbl_relatore_eth										= "Relatore"; 
+var _lbl_correlatore_eth									= "Correlatore"; 
+var _lbl_controrelatore_eth					    			= "Controrelatore"; 
+var _lbl_sottotitolo_studenti_eth 							= "Il docente dovrà partecipare alle seguenti sedute di laurea:"; 
+var _lbl_col_matricola_eth									= "MATRICOLA"; 
+var _lbl_col_studente_eth									= "STUDENTE"; 
+var _lbl_col_cds_eth										= "CDS"; 
+var _lbl_col_tesi_eth										= "TITOLO TESI"; 
+var _lbl_col_relatore_eth									= "RELATORE"; 
+var _lbl_col_correlatore_eth								= "CORRELATORE"; 
+var _lbl_col_controrelatore_eth				    			= "CONTRORELATORE"; 
+var _lbl_link_studenti 						    			= "vedi studenti"; 
+var _lbl_col_data_eth										= "DATA"; 
+var _lbl_col_ora_eth										= "ORA"; 
+var _lbl_col_aula_eth										= "AULA"; 
+var _lbl_col_presidente_eth					    			= "PRESIDENTE"; 
+var _lbl_col_studenti_eth									= "STUDENTI"; 
+var _lbl_col_reltoredi_eth									= "RELATORE DI"; 
+var _lbl_per_corso_di_laurea_et 							= "Per corso di laurea"; 
+var _lbl_per_docente_et						    			= "Per docente"; 
+var _lbl_per_insegnamento_et 								= "Per insegnamento"; 
+var _lbl_anno_accademico_et					    			= "Anno accademico"; 
+var _lbl_sessione_et        								= "Sessione"; 
+var _lbl_corso_laurea_et    								= "Corso di studio"; 
+var _lbl_anno_studio_et    					    			= "Anno di studio"; 
+var _lbl_mostra_esami_et									= "Mostra appelli"; 
+var _lbl_docente_et							    			= "Docente"; 
+var _lbl_insegnamento_et									= "Insegnamento"; 
+var _lbl_dal 												= " dal "; 
+var _lbl_al  												= " al "; 
+var _lbl_lista_button_et  									= "Esami ad elenco"; 
+var _lbl_excel_button_et  									= "Export Excel"; 
+var _lbl_insegnamento_et 									= "Insegnamento"; 
+var _lbl_docente_et  										= "Docente"; 
+var _lbl_data_e_ora_et 						    			= "Data e Ora"; 
+var _lbl_aula_et 											= "Aula"; 
+var _lbl_tipo_et 											= "Tipo"; 
+var _lbl_percorsi_et 										= "Percorsi didattici"; 
+var _lbl_appelli_et 										= "Appelli"; 
+var _lbl_numero_appelli_et 					    			= "Numero appelli: "; 
+var _lbl_data_et											= "Data"; 
+var _lbl_ora_et								    			= "Ora"; 
+var _lbl_nome_insegnamento_et								= "Insegnamento"; 
+var _lbl_docente_et							    			= "Docente"; 
+var _lbl_aula_sede_et  						    			= "Aula e sede"; 
+var _lbl_alert_nessun_insegnamento							= "Nessun insegnamento presente."; 
+var _lbl_alert_nessun_esame									= "Nessun esame presente."; 
+var _lbl_alert_nessun_esame_nelle_date						= "Nessun esame presente nelle date selezionate."; 
+var _lbl_alert_nessuna_selezione							= "Nessun insegnamento selezionato."; 
+var _lbl_home_page 							    			= "Home page"; 
+var _lbl_lezioni 											= "Orari lezioni"; 
+var _lbl_esami 								    			= "Calendario esami"; 
+var _lbl_lauree 											= "Calendario lauree"; 
+var _lbl_aule	 											= "Aule"; 
+var _lbl_bookings	 										= "Cerca prenotazioni"; 
+var _lbl_menu_app 											= "App mobile"; 
+var _lbl_teacher 											= "Impegni docente"; 
+var _lbl_colore_pieno 										= "Colore pieno"; 
+var _lbl_bordo_colorato 									= "Bordo colorato"; 
+var _lbl_nessuna_colorazione 								= "Nessuna colorazione"; 
+var _lbl_visualizzazione_orario 							= "Visualizzazione orario"; 
+var _lbl_settimanale_standard 								= "Orario base"; 
+var _lbl_settimanale_da_calendario 							= "Agenda settimanale"; 
+var _lbl_pag_app_titolo 									= "Scarica l'app ufficiale dell'%s"; 
+var _lbl_pag_app_sez_1                          			= "Scaricando l'app %s avrai sempre a portata di click il tuo orario delle lezioni, il calendario degli appelli d'esame e l'occupazione giornaliera delle aule di tutte le sedi dell'università, oltre ad altre funzionalità messa a disposizione dal tuo ateneo."; 
+var _lbl_pag_app_sez_2                          			= "Inoltre potrai ricevere le notifiche push che i docenti e gli uffici di supporto alla didattica invieranno per informarti di cambiamenti di aula di ultima ora, invito ad eventi e seminari, sospensioni lezioni ecc."; 
+var _lbl_pag_app_sez_3                          			= "Puoi scaricare %s nelle seguenti piattaforme:"; 
+var _lbl_sede												= "Sede"; 
+var _lbl_mostra_aule										= "Mostra aule"; 
+var _lbl_data_aule											= "Data"; 
+var _lbl_calendario_completo 								= "Calendario completo"; 
+var _lbl_nessun_evento										= "Nessun evento"; 
+var _lbl_titolo_legenda_rooms								= "Lista tipi di evento"; 
+var _lbl_messaggio_no_aule									= "<br>Impegni in aula non disponibili per questa data."; 
+var _lbl_noteAule											= "Note sull'aula"; 
+var _lbl_salto_lezione 										= "Nei seguenti giorni non ci sarà lezione: "; 
+var _lbl_date_i_f	 										= "Data inizio/fine insegnamento"; 
+var _lbl_message_note_event                     			= "<i class='fa fa-asterisk' aria-hidden></i> Un asterisco vicino al nome dell'evento può indicare la presenza di una nota. Cliccare sull'evento per visualizzarne il contenuto."; 
+var _lbl_all_sedi 											= "Tutte le sedi"; 
+var _lbl_search								    			= "Risultati della ricerca"; 
+var _lbl_tutti												= "Tutti"; 
+var _lbl_tipo												= "Tipo"; 
+var _lbl_user												= "Utilizzatori"; 
+var _lbl_dal_U												= "Dal"; 
+var _lbl_al_U												= "Al"; 
+var _lbl_stato 								    			= "Stato"; 
+var _lbl_confermato 										= "Confermato"; 
+var _lbl_annullato 							    			= "annullato"; 
+var _lbl_col_nome 											= "Titolo"; 
+var _lbl_col_aula 											= "Aula"; 
+var _lbl_col_data 											= "Data"; 
+var _lbl_col_ora 											= "Orari"; 
+var _lbl_bookings_empty 									= "Nessuna prenotazione trovata"; 
+var _lbl_titolo_messaggio_ec								= "Orario delle lezioni"; 
+var _lbl_messaggio_ec										= "Benvenuto nella sezione per la visualizzazione dell'orario delle lezioni. <br>In questa sezione potrai visualizzare l'orario delle lezioni del tuo corso di laurea. <br>Per ricercare il tuo orario, seleziona la modalità di ricerca tra quelle disponibili, e successivamente seleziona le informazioni nei vari menù a tendina e clicca su &ldquo;Mostra orario&rdquo;. <br>Ti ricordiamo che cliccando su ogni cella potrai visualizzare le informazioni aggiuntive di ogni lezione come note, recapiti del docente o mappe della sede in cui si trova l'aula della lezione."; 
+var _lbl_titolo_messaggio_et								= "Calendario esami"; 
+var _lbl_messaggio_et										= "Benvenuto nella sezione per la visualizzazione del calendario degli appelli d'esame. <br>In questa sezione potrai visualizzare il calendario degli appelli d'esame del tuo corso di laurea. <br>Per ricercare i tuoi appelli, seleziona la modalità di ricerca tra quelle disponibili, e successivamente seleziona le informazioni nei vari menù a tendina e clicca su &ldquo;Mostra appelli&rdquo;. <br>Ti ricordiamo che cliccando su ogni cella potrai visualizzare le informazioni aggiuntive di ogni appello come note, recapiti del docente o mappe della sede in cui si trova l'aula dell'appello."; 
+var _lbl_messaggio_et_custom								= "Benvenuto nella sezione per la visualizzazione del calendario degli appelli d'esame. <br>In questa sezione potrai visualizzare il calendario degli appelli d'esame del tuo corso di laurea e verrà sempre aggiornata.  <br>Dal 18 giugno giugno sono anche presenti i calendari per la prossima sessione esami di agosto-settembre a.a.2018/2019. <br>Per ricercare i tuoi appelli, seleziona la modalità di ricerca tra quelle disponibili, e successivamente seleziona le informazioni nei vari menù a tendina e clicca su &ldquo;Mostra appelli&rdquo;. <br>Ti ricordiamo che cliccando su ogni cella potrai visualizzare le informazioni aggiuntive di ogni appello come note, recapiti del docente o mappe della sede in cui si trova l'aula dell'appello.  <br>Memorizza il link così da accedere con più facilità anche per le prossime sessioni esami."; 
+var _lbl_titolo_messaggio_eth								= "Calendario sessioni di laurea"; 
+var _lbl_titolo_messaggio_eth                   			= "Calendario sessioni di laurea"; 
+var _lbl_home1												= "In questo portale potrai visualizzare: "; 
+var _lbl_home_ec											= "Orario delle lezioni"; 
+var _lbl_home_et											= "Appelli d'esame"; 
+var _lbl_home_eth											= "Calendario delle sedute di laurea"; 
+var _lbl_home_r												= "Occupazione delle aule"; 
+var _lbl_home_r_unisalento									= "Disponibilità delle aule"; 
+var _lbl_home_booking										= "Lista degli eventi filtrata per sede, tipo, stato o parola chiave"; 
+var _lbl_home_teacher										= "Impegni docente"; 
+var _lbl_home_app											= "Informazioni sull'App"; 
+var _lbl_home_presenze										= "Rilevazione presenze"; 
+var _lbl_home2                                  			= "Potrai ottenere maggiori informazioni sugli eventi (mappe, dati di contatto del docente, elenco degli eventi, etc) cliccando su ogni cella."; 
+var _lbl_scuola 											= "Scuola"; 
+var _lbl_dipartimento										= "Dipartimento"; 
+var _lbl_area_didattica						    			= "Area didattica"; 
+var _lbl_struttura_didattica								= "Struttura didattica"; 
+var _lbl_scuola_dip_struttura                   			= "Scuola/Dipartimento/Struttura"; 
+var _lbl_periodo_didattico									= "Periodo didattico"; 
+var _lbl_spiegazione_orario_base                			= "Per <b>Orario base</b> si intende l'orario delle lezioni che verrà svolto in tutte le settimane del periodo didattico.<br>Si consiglia di consultare la <i>Visualizzazione orario &raquo; Agenda settimanale</i> per verificare eventuali modifiche apportate rispetto all'Orario base.<br>Per visualizzare gli eventuali insegnamenti mutuati da altri Dipartimenti è necessario consultare l'orario in modalità agenda settimanale."; 
+var _lbl_ultimo_aggiornamento								= "Ultimo aggiornamento"; 
+var _lbl_alle												= "alle"; 
+var _lbl_aula_occupata										= "Aula occupata"; 
+var _lbl_colorazione_celle									= "Colorazione celle"; 
+var _lbl_riempimento_celle									= "Riempimento celle"; 
+var _lbl_colorazione_tipo									= "Colora celle per"; 
+var _lbl_col_per_insegnamento								= "Insegnamento"; 
+var _lbl_col_per_tipo										= "Obbligatori/consigliati"; 
+var _lbl_spiegazione_legenda_insegnamenti					= "Per visualizzare oppure oscurare le lezioni di alcuni insegnamenti, aggiungere o togliere la spunta a fianco del nome dell'insegnamento."; 
+var _lbl_spiegazione_legenda_eventi							= "Per visualizzare oppure oscurare gli eventi di un certo tipo, aggiungere o togliere la spunta a fianco del nome corrispondente."; 
+var _lbl_altre_funzioni										= "Altre funzioni"; 
+var _lbl_dati_di_ricerca									= "Informazioni ricercate"; 
+var _lbl_chiusura_festivita									= "Festività"; 
+var _lbl_chiusura											= "Chiusura"; 
+var _lbl_chiusura_lezioni_festivita 						= "FESTIVITÀ:<br><br>lezioni non previste"; 
+var _lbl_sospensione_attivita_didattiche					= "Sospensione delle attività didattiche"; 
+var _lbl_continua 											= "Continua"; 
+var _lbl_cerca 												= "Cerca"; 
+var _lbl_vai_al_sito_istituzionale							= "Vai alla home page della tua università"; 
+var _lbl_title_home								   			= "Agenda Web"; 
+var _lbl_title_home_unitn									= "Orari delle lezioni, calendario esami e aule"; 
+var _lbl_title_ec_home										= "Orario delle lezioni"; 
+var _lbl_title_ec_corso							   			= "Ricerca orario per corso di studio"; 
+var _lbl_title_ec_docente									= "Ricerca orario per docente"; 
+var _lbl_title_ec_attivita									= "Ricerca orario per insegnamento"; 
+var _lbl_title_et_home										= "Calendario esami"; 
+var _lbl_title_et_corso							   			= "Calendario esami per corso di laurea"; 
+var _lbl_title_et_docente									= "Calendario esami per docente"; 
+var _lbl_title_et_attivita									= "Calendario esami per insegnamento"; 
+var _lbl_title_eth_home							   			= "Sessioni di laurea"; 
+var _lbl_title_eth_stud							   			= "Sessioni di laurea per studente"; 
+var _lbl_title_eth_doc										= "Sessioni di laurea per docente"; 
+var _lbl_title_rooms										= "Ricerca aule libere e occupate"; 
+var _lbl_title_bookings							   			= "Ricerca eventi"; 
+var _lbl_title_app											= "App mobile"; 
+var _lbl_h1_home											= "Home page"; 
+var _lbl_h1_home_unitn										= "Orari, aule, calendario esami UniTrento"; 
+var _lbl_h1_ec_home								   			= "Orario delle lezioni"; 
+var _lbl_h1_ec_corso										= "Cerca il tuo orario per corso di studio"; 
+var _lbl_h1_ec_docente										= "Cerca il tuo orario per docente"; 
+var _lbl_h1_ec_attivita							   			= "Cerca il tuo orario per insegnamento"; 
+var _lbl_h1_et_home								   			= "Calendario esami"; 
+var _lbl_h1_et_corso										= "Cerca i tuoi esami per corso di laurea"; 
+var _lbl_h1_et_docente										= "Cerca i tuoi esami per docente"; 
+var _lbl_h1_et_attivita							   			= "Cerca i tuoi esami per insegnamento"; 
+var _lbl_h1_eth_home										= "Sessioni di laurea"; 
+var _lbl_h1_eth_stud										= "Cerca la tua sessione di laurea"; 
+var _lbl_h1_eth_doc								   			= "Cerca la sessione di laurea per docente"; 
+var _lbl_h1_rooms											= "Cerca le aule libere e occupate"; 
+var _lbl_h1_bookings										= "Cerca le prenotazioni"; 
+var _lbl_h1_app									   			= "Informazioni sull'App mobile"; 
+var _lbl_salta_al_main										= "Salta al contenuto principale"; 
+var _lbl_salta_inizio_pagina								= "Vai all'inizio pagina"; 
+var _lbl_salta_al_menu										= "Vai al menu principale"; 
+var _lbl_mostra_nascondi_ricerca							= "Mostra/nascondi ricerca"; 
+var _lbl_apri_menu											= "Apri/chiudi menu"; 
+var _lbl_menu												= "Menu:"; 
+var _lbl_corso_in_streaming_streaming						= "corso erogato anche in streaming"; 
+var _lbl_corso_in_streaming_videoconferenza					= "corso trasmesso in videoconferenza"; 
+var _lbl_errore_servizio_unimi_dati							= "Errore nei dati di input: codice insegnamento o anno accademico mancante"; 
+var _lbl_errore_servizio_unimi_n_car						= "Errore nei dati di input: il codice insegnamento deve essere di almeno tre caratteri"; 
+var _lbl_msg_scuole_no_cdl_pubblicati_scuole				= "Gli orari delle lezioni non sono ancora stati pubblicati per i corsi di laurea di questa scuola."; 
+var _lbl_msg_scuole_no_cdl_pubblicati_dip					= "Gli orari delle lezioni non sono ancora stati pubblicati per i corsi di laurea di questo dipartimento.";
+var _lbl_msg_scuole_no 										= ""; 
+var _lbl_toggle_contenuto									= "Mostra/nascondi"; 
+var _lbl_vedi_dettagli										= "Vedi dettagli"; 
+var _lbl_nome_evento										= "Nome evento"; 
+var _lbl_docenti_titolari									= "Docenti titolari"; 
+var _lbl_docenti_ausiliari									= "Docenti ausiliari"; 
+var _lbl_esame_scritto										= "esame scritto"; 
+var _lbl_esame_orale										= "esame orale"; 
+var _lbl_esame_scritto_orale								= "esame scritto-orale"; 
+var _lbl_esame_moodle					        			= "esame moodle"; 
+var _lbl_note_del_corso_di_laurea							= "Note del corso di laurea"; 
+var _lbl_senza_raggruppamento								= "Altre aule"; 
+var _lbl_area_raggruppamento								= "Area"; 
+var _lbl_azioni_orario										= "Operazioni sull'orario"; 
+var _lbl_testo_info_multi									= "In questo campo puoi selezionare contemporaneamente più anni di corso."; 
+var _lbl_nessun_evento_oggi                     			= "Nessun evento nella giornata selezionata."; 
+var _lbl_imposta_celle                          			= "Impostazioni griglia"; 
+var _lbl_visualizzazione_griglia                			= "Visualizzazione sovrapposizioni"; 
+var _lbl_griglia_compatta                       			= "Senza sovrapposizioni"; 
+var _lbl_griglia_oraria                         			= "Con  sovrapposizioni"; 
+var _lbl_nessuna_lez_trovata                    			= "Nessuna lezione trovata nel periodo selezionato."; 
+var _lbl_nessuna_lez_trovata_nel_giorno         			= "Nessuna lezione trovata nel giorno selezionato."; 
+var _lbl_clicca_per_tutti_gli_eventi            			= "Clicca qui per vedere tutte le lezioni dell'anno accademico."; 
+var _lbl_attendi_campi                          			= "Attendi il caricamento dei campi"; 
+var _lbl_attendi_contenuto                      			= "Caricamento dei contenuti"; 
+var _lbl_capacita_aula                          			= "Capacità"; 
+var _lbl_legenda_eter_title                     			= "Legenda appelli d'esame"; 
+var _lbl_legenda_eter_text                      			= "Elenco degli appelli d'esame nel range selezionato."; 
+var _lbl_spiegazione_legenda_insegnamenti_eter  			= "Per visualizzare oppure oscurare gli appelli di alcuni insegnamenti, aggiungere o togliere la spunta a fianco del nome dell'insegnamento."; 
+var _lbl_nome_aula											= "Nome aula"; 
+var _lbl_login                                  			= "Login"; 
+var _lbl_alert_login_fail                       			= "Inserire username e password"; 
+var _lbl_username                               			= "Username"; 
+var _lbl_password                               			= "Password"; 
+var _lbl_logoutok											= "Logout effettuato correttamente"; 
+var _lbl_accedi								    			= "Accedi"; 
+var _lbl_errore_autenticazione								= "Errore di autenticazione"; 
+var _lbl_msg_devi_loggarti									= "Per visualizzare la pagina è necessario autenticarsi"; 
+var _lbl_username_pss_mancanti								= "Username o password mancanti"; 
+var _lbl_title_presenze						    			= "Le mie presenze"; 
+var _lbl_percentuale_conseguimento							= "Percentuale per il conseguimento"; 
+var _lbl_ore_frequentate									= "Ore frequentate"; 
+var _lbl_ore_svolte							    			= "Ore svolte"; 
+var _lbl_ore_da_svolgere									= "Ore da svolgere"; 
+var _lbl_toggle_dettagli									= "Mostra/nascondi dettagli"; 
+var _lbl_Frequentate 										= "Frequentate"; 
+var _lbl_Future								    			= "Future"; 
+var _lbl_Assente 											= "Assente"; 
+var _lbl_descr_presenze						    			= "Di seguito il resoconto delle tue presenze e assenze"; 
+var _lbl_non_puoi_farcela									= "Siamo spiacenti, ma non puoi raggiungere la soglia per poter partecipare all'esame"; 
+var _lbl_ce_lhai_fatta										= "Complimenti! Hai raggiunto la soglia per poter partecipare all'esame"; 
+var _lbl_ce_la_puoi_fare									= "Mancano %s ore per raggiungere la soglia"; 
+var _lbl_errore								    			= "Errore"; 
+var _lbl_raggruppamento                         			= "Raggruppamento"; 
+var _lbl_orario_per_cdl						    			= "Orario per corso di laurea"; 
+var _lbl_orario_per_doc						    			= "Orario per docente"; 
+var _lbl_orario_per_ins					        			= "Orario per insegnamento"; 
+var _lbl_esami_per_cdl										= "Esami per corso di laurea"; 
+var _lbl_esami_per_doc										= "Esami per docente"; 
+var _lbl_esami_per_ins										= "Esami per insegnamento"; 
+var _lbl_prenotazioni  					        			= "Prenotazioni"; 
+var _lbl_rooms												= "Aule libere e occupate"; 
+var _lbl_visualizzazione_compatta               			= "Visualizzazione compatta"; 
+var _lbl_torna_visualizzazione_estesa           			= "Torna alla visualizzazione estesa"; 
+var _lbl_dati_ricerca                           			= "Dati della ricerca"; 
+var _lbl_lista_lezioni                          			= "Lista delle lezioni"; 
+var _lbl_lista_esami                            			= "Lista degli esami"; 
+var _lbl_link_eventi_insegnamento_eter          			= "Eventi collegati"; 
+var _lbl_link_eventi_insegnamento_eter_testo    			= "Vedi tutti gli eventi di questo insegnamento fino alla data "; 
+var _lbl_mail_ateneo										= "Email di ateneo"; 
+var _lbl_apri_allegato                          			= "Apri allegato"; 
+var _lbl_allegato                               			= "Allegato"; 
+var _lbl_message_grid_allegato                  			= "<i class='fa fa-asterisk' aria-hidden></i> Un asterisco vicino al nome dell'insegnamento può indicare la presenza di una nota, di un allegato o di un link. Cliccare sulla lezione per visualizzarne il contenuto."; 
+var _lbl_message_note_event_allegato               			= "<i class='fa fa-asterisk' aria-hidden></i> Un asterisco vicino al nome dell'evento può indicare la presenza di una nota, di un allegato o di un link. Cliccare sull'evento per visualizzarne il contenuto."; 
+var _lbl_vedi_note				               				= "Vedi note"; 
+var _lbl_vedi_note_o_allegati	               				= "Vedi note, allegati o link"; 
+var _lbl_vai_all_orario                        				= "Vai all'orario"; 
+var _lbl_bookings_titolo_str_did               				= ""; 
+var _lbl_esami_title                    					= "Esami"; 
+var _lbl_teacher_title                   					= "Impegni docente"; 
+var _lbl_teacher_placeholder                    			= "Cognome o matricola"; 
+var _lbl_spiegazione_bookings_search            			= "Ricerca delle prenotazioni con parola chiave contenuta nel titolo, nel nome dell'aula e tra gli utilizzatori."; 
+var _lbl_il_mio_oraio            							= "Il mio orario"; 
+var _lbl_descr_pag_studente            						= "In questa pagina puoi visualizzare l'orario delle lezioni degli insegnamenti per i quali non hai ancora sostenuto l'esame"; 
+var _lbl_title_ec_studente            						= "Il mio orario"; 
+var _lbl_superato_il            							= "Superato il"; 
+var _lbl_attivita_didattica            						= "Attività didattica"; 
+var _lbl_crediti            								= "Crediti"; 
+var _lbl_anno_            									= "Anno"; 
+var _lbl_tipologia_esame            						= "Tipologia esame"; 
+var _lbl_voto_finale            							= "Voto finale"; 
+var _lbl_ancora_da_sostenere	    						= "Voto finale"; 
+var _lbl_media_ponderata		    						= "Voto finale"; 
+var _lbl_base_di_laurea		    							= "Voto finale"; 
+var _lbl_media_e_base			    						= "Voto finale"; 
+var _lbl_hai_superato			    						= "Hai superato %s esami su %s"; 
+			
+var _lbl_popup_link_esterni			    					= ""; 
+var _lbl_popup_link_esterni_docente			    			= "Orario del docente"; 
+var _lbl_popup_link_esterni_insegnamento					= "Orario dell'insegnamento"; 
+			
+var _lbl_browser_supportati									= "<h4>Attenzione!</h4><p>Il browser Internet Explorer non è supportato. Ti consigliamo di utilizzare Chrome, Firefox, Microsoft Edge o Vivaldi.</p>"; 
+			
+var _lbl_evento_di_ateneo_popup_title						= "Evento di ateneo"; 
+var _lbl_manager											= "Organizzatore"; 
+			
+var _lbl_legenda_lez_obbligatorie							= "Lezioni obbligatorie del curriculum"; 
+var _lbl_legenda_lez_consigliate							= "Lezioni consigliate del curriculum"; 
+			
+var _lbl_home_aulestudio									= "Aule studio"; 
+var _lbl_title_aulestudio									= "Cerca la tua aulastudio"; 
+var _lbl_h1_aulestudio										= "Cerca un'aula studio"; 
+var _lbl_descr_pag_studente									= "In questa pagina puoi visualizzare l'orario delle lezioni degli insegnamenti per i quali non hai ancora sostenuto l'esame"; 
+
+
+var _lbl_titolo_tabella_aulestudio_pure						= "Aule studio"; 
+var _lbl_titolo_tabella_aulestudio_miste					= "Aule di didattica utilizzabili per lo studio"; 
+var _lbl_aulestudio_empty									= "Nessuna aula studio trovata"; 
+var _lbl_descrizione										= "Descrizione"; 
+var _lbl_orari_apertura										= "Orari apertura"; 
+var _lbl_link_occupazione									= "Consulta eventi giornalieri"; 
+var _lbl_orari_apertura_aula								= "Orari di apertura dell'aula"; 
+var _lbl_vedi_occupazione_aula								= "Occupazione aula"; 
+var _lbl_libera												= "Libera"; 
+var _lbl_occupata											= "Occupata"; 
+var _lbl_chiusa												= "Chiusa"; 
+var _lbl_descr_e_orari_apertura								= "Descrizione e orari di apertura"; 
+var _lbl_occupazione										= "Occupazione aula"; 
+var _lbl_as_popup_title										= "Come posso rilevare la mia presenza in un'aula studio?"; 
+var _lbl_step												= "STEP"; 
+var _lbl_as_popup_text_1									= "Dopo aver verificato la presenza di posti liberi tramite l'Agenda Web oppure tramite l'applicazione mobile %s, recati fisicamente in aula."; 
+var _lbl_as_popup_text_2									= "Accedi al livello “Dove studiare” di %s, esegui l'autenticazione e cattura il QR Code presente all'ingresso dell'aula studio. L'applicazione ti comunicherà la tua presenza in aula studio."; 
+var _lbl_as_popup_text_3									= "Quando avrai completato il tuo lavoro, ricordati di liberare l'aula attraverso l'applicaziome mobile %s così un altro studente potrà occupare il tuo posto (qualora te ne dimenticassi, te lo ricorderemo con una notifica push)."; 
+var _lbl_info_btn_aulestudio								= "Come posso occupare un posto in un'aula studio?"; 
+var _lbl_scarica_app										= "Per prima cosa devi scaricare l'app %s"; 
+var _lbl_aula_aperta_orari									= "L'aula è aperta nei seguenti orari"; 
+var _lbl_prossime_aperture_orari							= "Prossimi giorni di apertura"; 
+var _lbl_prossime_aperture									= "Prossime aperture"; 
+var _lbl_aulestudio											= "Aule studio"; 
+
+var _lbl_accetta_informativa_privacy						= "Accetto l'informativa sulla privacy"; 
+var _lbl_leggi_informativa_privacy							= "(leggi)"; 
+var _lbl_accetta_informativa_easylesson						= "Ho letto le norme sull'accesso ai locali"; 
+var _lbl_leggi_informativa_easylesson						= "(leggi)"; 
+var _lbl_titolo_area_EASYLESSON								= "Prenota il tuo posto a lezione"; 
+var _lbl_prenotalezione										= "Prenota il tuo posto a lezione"; 
+var _lbl_home_prenotalezione								= "Prenota il tuo posto a lezione"; 
+var _lbl_prenotalezione_prenota								= "Nuova prenotazione"; 
+var _lbl_prenotalezione_gestisci							= "Le mie prenotazioni"; 
+var _lbl_prenotalezione_profilo								= "Gestisci il tuo profilo"; 
+var _lbl_aggiungi_il_profilo								= "Aggiungi il profilo"; 
+var _lbl_spiegazione_aggiungi_profilo						= "Da questa pagina puoi aggiungere il profilo"; 
+var _lbl_cerca_insegnamenti									= "Cerca gli insegnamenti"; 
+var _lbl_tipo_laurea										= "Tipo laurea"; 
+var _lbl_seleziona_insegnamenti								= "Seleziona gli insegnamenti per cui vuoi prenotare le lezioni"; 
+var _lbl_email												= "e-mail"; 
+var _lbl_salva												= "Salva"; 
+var _lbl_alert_mail_mancante								= "La mail è obbligatoria."; 
+var _lbl_alert_insegnamenti_mancanti						= "Seleziona almeno un insegnamento."; 
+var _lbl_alert_mail_non_valida								= "Indirizzo mail non valido"; 
+var _lbl_titolo_popup_non_valido							= "Dati inseriti non validi"; 
+var _lbl_annulla											= "Annulla"; 
+var _lbl_titolo_pagina_mostra_profilo						= "Riepilogo del profilo"; 
+var _lbl_inserisci_mail										= "Inserisci l'indirizzo mail in cui vuoi ricevere gli aggiornamenti sulle tue prenotazioni (campo obbligatorio)"; 
+var _lbl_insegnamenti_del_profilo							= "Insegnamenti del tuo profilo"; 
+var _lbl_dati_del_profilo									= "Dati del profilo"; 
+var _lbl_studente											= "Studente"; 
+var _lbl_matricola											= "Matricola"; 
+var _lbl_modifica											= "Modifica"; 
+var _lbl_elimina											= "Elimina"; 
+var _lbl_popup_elimina_profilo_titolo						= "Sei sicuro di eliminare il tuo profilo? "; 
+var _lbl_popup_elimina_profilo_testo						= "Eliminando il tuo profilo saranno eliminate tutte le prenotazioni del posto in aula a lezione che hai effettuato con questo profilo studente."; 
+var _lbl_modifica_il_profilo								= "Modifica il tuo profilo"; 
+var _lbl_titolo_pagina_prenota								= "Prenota il tuo posto a lezione"; 
+var _lbl_nessuna_lezione_prenotabile						= "Nessuna lezione prenotabile"; 
+var _lbl_nessuna_lezione_prenotabile_testo					= "Nella giornata odierna e nei giorni a seguire non sono previste lezioni degli insegnamenti del tuo profilo."; 
+var _lbl_vai_al_tuo_profilo									= "vai al tuo profilo"; 
+var _lbl_annulla_prenotazione								= "Annulla la tua prenotazione"; 
+var _lbl_prenotazione_effettuata							= "Prenotazione effettuata"; 
+var _lbl_verifica_prenota									= "Verifica e prenota il tuo posto"; 
+var _lbl_turno												= "Turno"; 
+var _lbl_prenotazione_annullata								= "Prenotazione annullata"; 
+var _lbl_effettua_check_in									= "Effettua il Check-In"; 
+var _lbl_esporta_pdf										= "Esporta in PDF"; 
+var _lbl_popup_modifica_profilo_titolo						= "Sei sicuro di modificare il tuo profilo?"; 
+var _lbl_popup_modifica_profilo_testo						= "Cliccando sul pulsante Modifica saranno eliminate tutte le prenotazioni del posto in aula a lezione che hai effettuato da oggi in poi."; 
+var _lbl_titolo_popup_primo_profilo							= "Per effettuare le prenotazioni del posto in aula a lezione è necessario definire un Profilo."; 
+var _lbl_content_popup_primo_profilo						= "Scegli il corso di laurea a cui sei iscritto e seleziona gli insegnamenti per i quali vorrai frequentare le lezioni in aula compilando i dati della scheda seguente."; 
+var _lbl_ho_capito											= "Ho capito"; 
+var _lbl_mostra_nascondi_passate							= "Mostra/nascondi le prenotazioni passate"; 
+var _lbl_cosa_significa										= "Cosa significa"; 
+var _lbl_cosa_significa_profilo								= "<br><p>Questa scheda permette di selezionare gli insegnamenti per i quali desidererai frequentare le lezioni. Per alcuni di questi insegnamenti potrai prenotare il posto in presenza.</p><p>Al fine di limitare le prenotazioni di posti in aula che non siano strettamente legati al percorso di studi scelto dallo studente, la procedura permette di selezionare gli insegnamenti di un <span style='text-decoration: underline'>singolo corso di laurea</span>.</p><p>Ti ricordiamo che le lezioni per le quali non riuscirai a prenotare il posto in aula potranno essere seguite a distanza.</p><p style='text-decoration: underline;'>Altre raccomandazioni Importanti:</p><ul><li>Qualora tu non intenda frequentare alcuna lezione in aula, ti raccomandiamo di non definire il tuo profilo oppure di non selezionare alcun insegnamento.</li><li>Al fine di permettere la miglior distribuzione delle prenotazioni dei posti in aula a lezione, ti raccomandiamo di selezionare solamente gli insegnamenti che intendi frequentare in aula.</li><li>Seleziona correttamente gli insegnamenti che vorrai frequentare perché la successiva modifica o l'eliminazione del Profilo causa la perdita di eventuali prenotazioni effettuate (le prenotazioni andranno inserite nuovamente).</li></ul>"; 
+var _lbl_cosa_significa_prenota								= "<br><p>Questa scheda permette di effettuare una nuova prenotazione di un posto in aula a lezione per gli insegnamenti selezionati nella scheda &ldquo;Gestisci il tuo profilo&rdquo;.</p><p>La prenotazione del posto in aula a lezione può essere effettuata solamente per le lezioni pianificate da oggi a %s giorni solari; le lezioni che si svolgono esclusivamente a distanza non saranno visualizzate nell'elenco delle lezioni prenotabili.</p><p>I controlli svolti dal sistema durante la prenotazione di un posto in aula a lezione sono riportati in seguito.</p><p><span style='text-decoration: underline'>Conteggi fisici dell'edificio e delle aule:</span></p><ul><li>Controllo sul numero massimo di prenotazioni nell'edificio.</li><li>Controllo sul numero massimo di prenotazioni in aula.</li></ul><p><span style='text-decoration: underline'>Conteggi personali dello studente:</span></p><ul><li>Controllo sul numero di ore prenotate, per le lezioni di tutti gli insegnamenti del tuo profilo, nell'arco di una settimana (da lunedì a sabato).</li><li>Controllo sul numero di ore prenotate per le lezioni di un insegnamento del tuo profilo nell'arco dell'intero periodo didattico.</li><li>Controllo sul numero di ore prenotate per le lezioni di un insegnamento del tuo profilo negli ultimi 7 oppure 14 giorni solari.</li></ul>"; 
+var _lbl_cosa_significa_gestisci							= "<br><p>Questa scheda permette di consultare ed annullare le prenotazioni di un posto in aula a lezione già effettuate.</p><p>Per le prenotazioni di lezioni che si svolgeranno nella data odierna è inoltre possibile accedere alla &ldquo;Carta di accesso ai locali&ldquo; contenente i dati e il QR Code della tua prenotazione; il QR Code ti verrà richiesto per il Check-In all'ingresso dei locali in caso di controllo da parte del personale addetto.</p>"; 
+var _lbl_nessuna_lezione_prenotata							= "Nessuna lezione prenotata"; 
+var _lbl_vai_a_aggiungi_1									= "Aggiungi una prenotazione"; 
+var _lbl_vai_a_aggiungi_2									= "vai alla pagina di aggiunta delle prenotazioni"; 
+var _lbl_controlla_profilo_1								= "Controlla il tuo profilo per aggiungere insegnamenti con lezioni disponibili"; 
+var _lbl_controlla_profilo_2								= "vai al tuo profilo"; 
+var _lbl_popup_conferma_prenotazione_titolo					= "Sicuro di voler prenotare la lezone?"; 
+var _lbl_prenota											= "Prenota"; 
+var _lbl_popup_annulla_prenotazione_titolo					= "Sei sicuro di voler annullare la tua prenotazione?"; 
+var _lbl_chiudi												= "Chiudi"; 
+var _lbl_operazione_effettuata								= "Operazione effettuata"; 
+var _lbl_conferma_operazione								= "Conferma operazione"; 
+var _lbl_check_in_prenotazione								= "Carta di accesso ai locali"; 
+var _lbl_check_in_spiegazione								= "Di seguito vengono riportati i dati della tua prenotazione con il relativo QR Code che dovrai presentare per il Check-In all'ingresso dei locali in caso controllo da parte del personale addetto."; 
+var _lbl_qr_code_tua_prenotazione							= "QR code della tua prenotazione"; 
+var _lbl_orario_prima_lezione								= "Orario prima lezione"; 
+var _lbl_non_si_puo_cancellare								= "La prenotazione non può essere annullata"; 
+var _lbl_mail_in_cui_riceverai								= "Indirizzo mail in cui riceverai gli aggiornamenti sulle tue prenotazioni"; 
+var _lbl_accetta_info_privacy								= "È necessario leggere ed accettare l'informativa sulla privacy."; 
+var _lbl_accetta_info_easylesson							= "È necessario leggere ed accettare le norme sull'accesso ai locali."; 
+var _lbl_prenotazione_non_piu_visualizzata					= "Questa prenotazione non verrà visualizzata alla prossima apertura della pagina"; 
+var _lbl_lezione_gia_iniziata_non_prenotabile				= "Le lezioni già iniziate non possono essere prenotate"; 
+var _lbl_operazione_non_effettuata							= "Operazione non effettuata"; 
+var _lbl_avviso_lezioni_non_prenotabili						= "<p>Di seguito l'elenco delle lezioni per le quali potrai prenotare il posto a lezione in aula; ricordiamo che le lezioni che si svolgono completamente a distanza non saranno riportate in elenco.</p><p>Per visualizzare l'orario completo delle tue lezioni della settimana odierna clicca su <a href='%s' class='custom-color'><i class='fa fa-angle-double-right' aria-hidden='true'></i>&nbsp;Consulta il tuo orario</a>"; 
+var _lbl_popup_prenotazione_effettuata_titolo				= "Complimenti, la prenotazione richiesta è stata effettuata"; 
+var _lbl_popup_prenotazione_effettuata_testo				= "La tua prenotazione sarà ora visibile nella scheda &ldquo;Le mie prenotazioni&ldquo;"; 
+var _lbl_necessario_aggiungere_profilo						= "Per effettuare delle prenotazioni è necessario aggiungere un profilo."; 
+var _lbl_last_minute										= "Prenotazione last minute - che cosa significa"; 
+var _lbl_last_minute_text									= "<p>Il last minute permette di prenotare una lezione in aula che si svolgerà a breve, senza che tale prenotazione abbia effetto sui &ldquo;Conteggi personali dello studente&ldquo;.</p><p>Per verificare quali sono i &ldquo;Conteggi personali dello studente&ldquo; consigliamo di consultare la guida in linea nella pagina inziale.</p><p>Il last minute è pensato per garantire una buona presenza di studenti in aula, sempre nel rispetto della massima capienza prevista.</p>"; 
+var _lbl_vai_a_aggiungi_3									= "Per effettuare una prenotazione vai alla pagina <a href='%s' class='custom-color'><i class='fa fa-angle-double-right' aria-hidden='true'></i>&nbsp;Nuova prenotazione</a>"; 
+var _lbl_popup_modifica_profilo_apertura_titolo				= "Sei sicuro di modificare il tuo profilo?";
+var _lbl_popup_modifica_profilo_apertura_testo_slot			= "Modificando il tuo profilo saranno eliminate tutte le prenotazioni del posto in aula a lezione che hai effettuato da oggi in poi."; 
+var _lbl_popup_modifica_profilo_apertura_testo_singola		= "Modificando il tuo profilo saranno eliminate tutte le prenotazioni del posto in aula a lezione per gli insegnamenti che andrai a deselezionare."; 
+var _lbl_cerca_insegnamenti_text							= "Seleziona il tuo corso di studio per ricercare gli insegnamenti per i quali vorrai prenotare il posto in aula a lezione.<br>Se non trovi il tuo corso di laurea, la procedura di iscrizione potrebbe non essere stata attivata."; 
+var _lbl_mostra_nascondi_parametri_di_ricerca				= "Mostra/nascondi parametri di ricerca"; 
+var _lbl_prenotazione_non_consentita						= "Prenotazione non consentita"; 
+var _lbl_prenotazione_non_consentita_text					= "L'operazione che hai appena effettuato non può essere completata"; 
+var _lbl_prenotazione_effettuata_text						= "L'operazione che hai appena effettuato è stata completata e il tuo posto in aula a lezione è stato prenotato"; 
+var _lbl_prenotazione_annullata_text						= "L'operazione che hai appena effettuato è stata completata e la prenotazione del tuo posto in aula a lezione è stata annullata"; 
+var _lbl_check_in_spiegazione_popup							= "Il QR Code sopra riportato dovrà essere presentato per il Check-In all'ingresso dei locali in caso di controllo da parte del personale addetto.<br>In seguito riportiamo i dati della tua prenotazione."; 
+var _lbl_testo_sub_home_orari_cdl							= "<br><p>Questa scheda permette di consultare l'orario delle lezioni del corso di laurea e dell'anno di corso di tuo interesse.</p><p>A seconda della scelta fatta dalla segreteria didattica, l'orario delle lezioni del tuo corso di laurea e anno potrà essere consultato tramite le seguenti visualizzazioni:</p><ul><li>Agenda settimanale: verrà proposto l'orario delle lezioni della settimana corrente; qualora non ci sia alcun orario nella settimana corrente il sistema ti proporrà la lista delle date nelle quali è disponibile l'orario.</li><li>Orario base: verrà proposto l'orario delle lezioni della settimana &quot;tipo&quot; dell'orario.</li></ul><p>Ti ricordiamo che se alcuni insegnamenti non sono di tuo interesse potrai oscurarli dall'apposita legenda.</p>"; 
+var _lbl_testo_sub_home_orari_doc							= "<br><p>Questa scheda permette di consultare l'orario delle lezioni del docente.</p><p>A seconda della scelta fatta dalla segreteria didattica, l'orario delle lezioni del docente potrà essere consultato tramite le seguenti visualizzazioni:</p><ul><li>Agenda settimanale: verrà proposto l'orario delle lezioni della settimana corrente; qualora non ci sia alcun orario nella settimana corrente il sistema ti proporrà la lista delle date nelle quali è disponibile l'orario.</li><li>Orario base: verrà proposto l'orario delle lezioni della settimana &quot;tipo&quot; dell'orario.</li></ul>"; 
+var _lbl_testo_sub_home_orari_ins							= "<br><p>Questa scheda permette di consultare l'orario delle lezioni selezionando singoli insegnamenti.</p><p>A seconda della scelta fatta dalla segreteria didattica, l'orario delle lezioni degli insegnamenti selezionati potrà essere consultato tramite le seguenti visualizzazioni:</p><ul><li>Agenda settimanale: verrà proposto l'orario delle lezioni della settimana corrente; qualora non ci sia alcun orario nella settimana corrente il sistema ti proporrà la lista delle date nelle quali è disponibile l'orario.</li><li>Orario base: verrà proposto l'orario delle lezioni della settimana &quot;tipo&quot; dell'orario.</li></ul>"; 
+var _lbl_testo_sub_home_esami_cdl							= "<br><p>Questa scheda permette di consultare il calendario degli esami del corso di laurea e dell'anno di corso di tuo interesse.</p><p>Potrai consultare le date degli esami del tuo corso di laurea e anno di corso della sessione d'esame da te selezionata.</p><p>Per ogni data di esame potrai verificare l'orario di inizio e di fine della prova e l'aula in cui questo si svolge.</p>"; 
+var _lbl_testo_sub_home_esami_doc							= "<br><p>Questa scheda permette di consultare il calendario degli esami del docente di tuo interesse.</p><p>Potrai consultare le date degli esami del docente di tuo interesse all'interno della sessione d'esame da te selezionata.</p><p>Per ogni data di esame potrai verificare l'orario di inizio e di fine e l'aula in cui questo si svolge.</p>"; 
+var _lbl_testo_sub_home_esami_ins							= "<br><p>Questa scheda permette di consultare il calendario degli esami dell'insegnamento ricercato.</p><p>Potrai consultare le date degli esami dell'insegnamento di tuo interesse all'interno della sessione d'esame da te selezionata.</p><p>Per ogni data di esame potrai verificare l'orario di inizio e di fine e l'aula in cui questo si svolge.</p>"; 
+var _lbl_testo_sub_home_esami_cdl_er						= "<br><p>Questa scheda permette di consultare il calendario degli esami del corso di laurea e dell'anno di corso di tuo interesse.</p><p>Potrai consultare le date degli esami del tuo corso di laurea e anno di corso all’interno dell'intervallo di date da te selezionato.</p><p>Per ogni data di esame potrai verificare l'orario di inizio e di fine della prova e l'aula in cui questo si svolge.</p><p>Grazie alla voce &quot;Vedi dettagli&quot; potrai inoltre prendere visione delle altre prove collegate all'esame considerato (ad esempio per verificare le date di prove scritte e orali oppure per verificare le date degli altri appelli).</p>"; 
+var _lbl_testo_sub_home_esami_doc_er						= "<br><p>Questa scheda permette di consultare il calendario degli esami del docente di tuo interesse.</p><p>Potrai consultare le date degli esami del docente di tuo interesse all'interno dell'intervallo di date da te selezionato.</p><p>Per ogni data di esame potrai verificare l'orario di inizio e di fine e l'aula in cui questo si svolge.</p><p>Grazie alla voce &quot;Vedi dettagli&quot; potrai inoltre prendere visione delle altre prove collegate all'esame considerato (ad esempio per verificare le date di prove scritte e orali oppure per verificare le date degli altri appelli).</p>"; 
+var _lbl_testo_sub_home_esami_ins_er						= "<br><p>Questa scheda permette di consultare il calendario degli esami dell'insegnamento ricercato.</p><p>Potrai consultare le date degli esami dell'insegnamento di tuo interesse all'interno dell'intervallo di date da te selezionato.</p><p>Per ogni data di esame potrai verificare l'orario di inizio e di fine e l'aula in cui questo si svolge.</p><p>Grazie alla voce &quot;Vedi dettagli&quot; potrai inoltre prendere visione delle altre prove collegate all'esame considerato (ad esempio per verificare le date di prove scritte e orali oppure per verificare le date degli altri appelli).</p>"; 
+var _lbl_prenotazione_odierna_non_canc_popup				= "Se prenoti questa lezione, non sarà più possibile annullarla in quanto appartiene alla giornata odierna.<br>Vuoi procedere?"; 
+var _lbl_operazione_non_consentita							= "Operazione non consentita"; 
+var _lbl_riprova											= "Riprova"; 
+var _lbl_posti_disponibili_su								= " posti disponibili su "; 
+var _lbl_non_prenotabile									= "Il posto in aula a lezione non è prenotabile"; 
+var _lbl_ci_sono											= "Ci sono "; 
+var _lbl_insegnamento_non_prenotabile						= "Questo insegnamento non prevede la prenotazione on-line del posto in aula"; 
+var _lbl_non_ci_sono_posti									= "Il posto in aula a lezione non è prenotabile - i posti sono esauriti"; 
+var _lbl_un_posto_libero									= "C'è ancora 1 posto libero"; 
+var _lbl_popup_modifica_profilo_testo_singola				= "Modificando il tuo profilo saranno eliminate tutte le prenotazioni del posto in aula a lezione per gli insegnamenti che hai deselezionato."; 
+var _lbl_dettaglio_lezioni									= "Dettaglio lezioni"; 
+var _lbl_link_insegnamento									= "Link insegnamento"; 
+var _lbl_link_elly											= "Link a Elly"; 
+var _lbl_apri_link											= "apri link"; 
+
+var _lbl_orario_lezioni_per_cdl								= "Ricerca l'orario delle lezioni per corso di laurea"; 
+var _lbl_orario_lezioni_per_doc								= "Ricerca l'orario delle lezioni per docente"; 
+var _lbl_orario_lezioni_per_ins								= "Ricerca l'orario delle lezioni per insegnamento"; 
+var _lbl_orario_esami_per_cdl								= "Ricerca il calendario degli esami per corso di laurea"; 
+var _lbl_orario_esami_per_doc								= "Ricerca il calendario degli esami per docente"; 
+var _lbl_orario_esami_per_ins								= "Ricerca il calendario degli esami per insegnamento"; 
+
+var _lbl_tipologia_differita								= "Differita"; 
+var _lbl_tipologia_on_line									= "On line"; 
+var _lbl_tipologia_in_aula									= "In presenza"; 
+var _lbl_tipologia_mista									= "Mista (in presenza/on line)"; 
+var _lbl_tipologia_insegnamento								= "Tipologia insegnamento"; 
+var _lbl_insegnamento_in_mod_differita						= "L'insegnamento %s si svolge in modalità differita"; 
+var _lbl_posto_assegnato									= "Posto assegnato"; 
+var _lbl_accedi_all_aw										= "Accedi all'Agenda Web"; 
+var _lbl_info_prenota_il_posto								= "Informazioni &quot;Prenota il posto&quot;"; 
+var _lbl_gruppi_studenti									= "Visualizza Gruppo di Appartenenza"; 
+var _lbl_descr_gruppistudenti								= "Insegnamenti a cui sei assegnato"; 
+var _lbl_nessun_insegnamento_trovato						= "Nessun insegnamento trovato"; 
+var _lbl_gruppo												= "Gruppo"; 
+var _lbl_dati_dello_studente								= "Dati studente"; 
+var _lbl_operation_row_unitn								= "<span style='font-weight:bold'>Come si entra:</span><br>Con la UniTrentoApp! Installala sul tuo smartphone e tienila aggiornata. Serve per autocertificare il tuostato di salute e registrarti quando entri ed esci.<br>Per fare il check-in e il check-out devi effettuare il login all'interno di UniTrentoApp.<br><span style='font-weight:bold'>Attenzione: </span>potrai accedere all'edificio dove si svolgono le lezioni solo nei giorni (o mezze giornate) in cui sono previste le lezioni a te destinate. Se non trovi l'autorizzazione, non recarti in dipartimento perché non potrai accedere all'edificio."; 
+var _lbl_informativa_privacy_univr							= "Il trattamento dei dati personali, relativo al presente servizio, sarà improntato ai principi di correttezza, liceità, trasparenza e di tutela della Sua riservatezza (artt. 5 e ss., GDPR). I dati personali da Lei forniti (nome e cognome, matricola, codice fiscale, indirizzo e-mail, prenotazione del posto, accessi effettuati nella sede) saranno trattati dall'Università degli studi di Verona, quale Titolare del trattamento, per l'erogazione del servizio di prenotazione e di accesso alle aule prenotate. Ulteriori informazioni in merito alle finalità, alle modalità di trattamento e all'esercizio dei diritti (artt. 15-22, GDPR) sono reperibili nelle informative relative al trattamento dei dati personali degli studenti dei corsi di studio dell'Ateneo, consultabili al seguente link: <a href='https://www.univr.it/it/privacy' target='_blank'>https://www.univr.it/it/privacy</a>"; 
+var _lbl_accetta_informativa_easylesson_univr				= "Dichiaro di conoscere e rispettare le norme sull’accesso ai locali"; 
+var _lbl_descr_gruppidocenti								= "Elenco degli insegnamenti"; 
+var _lbl_gruppi_docente_luiss								= "Gruppi insegnamenti"; 
+var _lbl_non_si_puo_creare_profilo							= "Non è ancora possibile creare un profilo."; 
+
+var _lbl_presente											= "Presente"; 
+var _lbl_non_presente										= "Assente"; 
+var _lbl_presente_non_presente								= "Presente/Assente"; 
+var _lbl_dichiara_posto										= "Numero posto"; 
+var _lbl_msg_devi_loggarti_per_prenotarti					= "Per prenotare è necessario autenticarsi"; 
+var _lbl_dichiara_posto_titolo								= "Attenzione"; 
+var _lbl_hai_ancora_n_posti_da_inserire						= "Devi ancora dichiarare la tua presenza in aula per <span id='n_eventi_da_inserire_n_posto'></span> lezioni.<br>Clicca qui per dichiarare la tua presenza alle lezioni a cui hai partecipato."; 
+var _lbl_mostra_nascondi_posto								= "Mostra/nascondi le prenotazioni per cui non hai ancora dichiarato la tua presenza."; 
+
+var _lbl_popup_no_presente_assente_titolo					= "Attenzione"; 
+var _lbl_popup_no_presente_assente_testo					= "Per poter confermare il salvataggio dei dati devi dichiarare la tua presenza/assenza a lezione"; 
+var _lbl_popup_assente_titolo								= "La tua scelta non sarà più modificabile."; 
+var _lbl_popup_assente_testo								= "Stai dichiarando di NON aver partecipato alla lezione:"; 
+var _lbl_popup_presente_no_posto_titolo						= "Attenzione"; 
+var _lbl_popup_presente_no_posto_testo						= "Per poter confermare il salvataggio dei dati devi indicare il numero del posto in cui eri seduto (se non lo ricordi scrivi &quot;Non ricordo&quot;)"; 
+var _lbl_popup_presente_titolo								= "La tua scelta non sarà più modificabile."; 
+var _lbl_popup_presente_testo_1								= "Stai dichiarando di aver partecipato alla lezione:"; 
+var _lbl_popup_presente_testo_2								= "e di esserti seduto nel posto"; 
+var _lbl_popup_riepilogo_presente							= "Hai dichiarato di aver partecipato alla lezione"; 
+var _lbl_popup_riepilogo_assente							= "Hai dichiarato di NON aver partecipato alla lezione"; 
+var _lbl_popup_riepilogo_posto								= "e di esserti seduto nel posto"; 
+var _lbl_salvato											= "Salvato"; 
+var _lbl_sei_sicuro_di_salvare								= "Sei sicuro di confermare il salvataggio dei dati?"; 
+var _lbl_dipartimento_scuola								= "Dipartimento/Scuola"; 
+var _lbl_studenti_iulm										= " (studenti IULM)"; 
+var _lbl_cosa_significa_prenota_unisalento					= "<br><p>Questa scheda permette di effettuare una nuova prenotazione di un posto in aula a lezione per gli insegnamenti selezionati nella scheda &ldquo;Gestisci il tuo profilo&rdquo;.</p><p>La prenotazione del posto in aula a lezione può essere effettuata solamente per le lezioni pianificate da oggi a %s giorni solari; le lezioni che si svolgono esclusivamente a distanza non saranno visualizzate nell'elenco delle lezioni prenotabili.</p><p>I controlli svolti dal sistema durante la prenotazione di un posto in aula a lezione sono riportati in seguito.</p><p><span style='text-decoration: underline'>Conteggi fisici dell'edificio e delle aule:</span></p><ul><li>Controllo sul numero massimo di prenotazioni in aula.</li></ul><p><span style='text-decoration: underline'>Conteggi personali dello studente:</span></p><ul><li>Controllo sul numero di ore prenotate, per le lezioni di tutti gli insegnamenti del tuo profilo, nell'arco di una settimana (da lunedì a sabato).</li><li>Controllo sul numero di ore prenotate per le lezioni di un insegnamento del tuo profilo nell'arco dell'intero periodo didattico.</li><li>Controllo sul numero di ore prenotate per le lezioni di un insegnamento del tuo profilo negli ultimi 7 oppure 14 giorni solari.</li></ul>"; 
+var _lbl_prenotalezione_guida_studente						= "Guida allo studente"; 
+var _lbl_prenotazione_effettuata_text_unisalento			= "<br>Si evidenzia che la prenotazione varrà come attestazione di presenza in aula e, pertanto, su richiesta delle autorità sanitarie competenti per il tracciamento di eventuali contagi, potrebbe essere richiesto e fornito l'elenco dei presenti in aula. Risulta importante quindi, cancellare la prenotazione se non più necessaria e  non consentire che la propria prenotazione sia utilizzata da altro studente."; 
+var _lbl_accetta_informativa_easylesson_unsalento			= "Dichiaro di aver preso visione e di accettare tutte le indicazioni del documento Informativa per il contenimento e la gestione dell'emergenza epidemiologica COVID-19 disponibile al <a target='_blank' href='https://drive.google.com/file/d/1D9R7PYpvRYt1UEovSQi7OQ5L2CZF8u05/'>link</a> e di non trovarmi in nessuna delle condizioni ivi previste per rimanere a casa.<br>Sono consapevole che la prenotazione varrà come attestazione di presenza in aula e, pertanto, su richiesta delle autorità sanitarie competenti per il tracciamento di eventuali contagi, potrebbe essere richiesto e fornito l'elenco dei presenti in aula e che risulta importante quindi, cancellare la prenotazione se non più necessaria e  non consentire che la propria prenotazione sia utilizzata da altro studente."; 
+var _lbl_error_login_unifi									= "Dichiaro di aver preso visione e di accettare tutte le indicazioni del documento Informativa per il contenimento e la gestione dell'emergenza epidemiologica COVID-19 disponibile al <a target='_blank' href='https://drive.google.com/file/d/1D9R7PYpvRYt1UEovSQi7OQ5L2CZF8u05/'>link</a> e di non trovarmi in nessuna delle condizioni ivi previste per rimanere a casa.<br>Sono consapevole che la prenotazione varrà come attestazione di presenza in aula e, pertanto, su richiesta delle autorità sanitarie competenti per il tracciamento di eventuali contagi, potrebbe essere richiesto e fornito l'elenco dei presenti in aula e che risulta importante quindi, cancellare la prenotazione se non più necessaria e  non consentire che la propria prenotazione sia utilizzata da altro studente."; 
+var _lbl_accetta_informativa_privacy_uniss					= "Dichiaro di aver preso visione dell'informativa sul trattamento dei dati personali dei soggetti sottoposti a identificazione all'’'ingresso e/o rilevazione della temperatura corporea per motivi sanitari legati all'emergenza COVID-19 presente al link <a target='_blank' href='https://www.uniss.it/protezione-privacy'>https://www.uniss.it/protezione-privacy</a>"; 
+var _lbl_non_si_puo_cancellare_oggi							= "Le prenotazioni di oggi non possono essere annullate"; 
+var _lbl_hai_ancora_n_posti_da_inserire_bis					= "Attenzione <i class='fa fa-angle-double-right' aria-hidden='true'></i>&nbsp;Devi ancora dichiarare la tua presenza in aula per %s lezioni."; 
+var _lbl_cosa_significa_gestisci_unifi						= "<br><p>Questa scheda permette di consultare ed annullare le prenotazioni di un posto in aula a lezione già effettuate.</p>"; 
+var _lbl_guida_breve										= "Guida breve"; 
+var _lbl_classe												= "Classe"; 
+var _lbl_hai_prenotato_la_lezione							= "Hai prenotato la lezione"; 
+var _lbl_prenota_il_posto									= "Prenota il posto"; 
+var _lbl_riservato_giuri									= "Servizio per gli studenti di Giurisprudenza"; 
+var _lbl_anno_zero_label									= "Insegnamenti comuni"; 
+var _lbl_anno_zero_label_unige								= "Lettorati"; 
+var _lbl_cosa_significa_gestisci_sns						= "<br><p>Questa scheda permette di consultare ed annullare le prenotazioni di un posto in aula a lezione già effettuate.</p>"; 
+var _lbl_popup_modifica_profilo_apertura_testo_slot_unifi	= "Modificando il tuo profilo saranno eliminate tutte le prenotazioni del posto in aula a lezione che hai effettuato con questo profilo studente."; 
+var _lbl_cosa_significa_prenota_unifi	 					= "<br><p>Questa scheda permette di effettuare una nuova prenotazione di un posto in aula a lezione per gli insegnamenti selezionati nella scheda &quot;Gestisci il tuo profilo&quot;; è possibile prenotare il posto dal Lunedì al Giovedì della settimana corrente per gli insegnamenti che si terranno nella settimana successiva.</p>"; 
+
+var _lbl_insegnamenti_curriculari	 						= "Insegnamenti curriculari"; 
+var _lbl_insegnamenti_extracurriculari	 					= "Insegnamenti extracurriculari"; 
+var _lbl_insegnamenti_curriculari_text	 					= "Clicca per aprire o chiudere la tabella degli Insegnamenti curriculari del tuo profilo"; 
+var _lbl_insegnamenti_extracurriculari_text	 				= "Clicca per aprire o chiudere la tabella degli Insegnamenti extracurriculari del tuo profilo"; 
+var _lbl_elimina_il_profilo					 				= "Elimina il profilo"; 
+var _lbl_aggiungi_insegnamenti					 			= "Aggiungi insegnamenti"; 
+var _lbl_titolo_tab_extra_aggiunti					 		= "Insegnamenti extracurriculari del tuo profilo"; 
+var _lbl_aggiungi					 						= "Aggiungi"; 
+
+
+var _lbl_conferma_aggiunta_al_profilo_1					 	= "Confermi di aggiungere l'insegnamento "; 
+var _lbl_conferma_aggiunta_al_profilo_2					 	= " al tuo profilo?"; 
+var _lbl_conferma_elimina_al_profilo_1					 	= "Confermi di eliminare l'insegnamento "; 
+var _lbl_conferma_elimina_al_profilo_2					 	= " dal tuo profilo?"; 
+
+var _lbl_popup_elimina_profilo_testo_extra					= "Eliminando il profilo, verranno eliminati tutti gli insegnamenti curriculari ed extracurriculari che avevi aggiunto."; 
+var _lbl_aggiungi_insegnamenti_extra						= "Aggiungi insegnamenti extracurriculari al tuo profilo"; 
+
+var _lbl_modifica_mail_popup_title							= "Modifica la tua mail"; 
+var _lbl_modifica_mail_popup_text							= "Inserisci l'indirizzo mail in cui vuoi ricevere gli aggiornamenti sulle tue prenotazioni"; 
+var _lbl_modifica_mail_success_info							= "Mail modificata correttamente. La tua nuova mail è:  "; 
+var _lbl_click_per_modifica_mail							= "Clicca qui per modificare la tua mail"; 
+var _lbl_num_ins_extra_raggiunto							= "Hai raggiunto il numero massimo di insegnamenti extracurriculari che puoi aggiungere."; 
+var _lbl_num_ins_extra_raggiunto_popup_title				= "Operazione non consentita"; 
+var _lbl_num_ins_extra_raggiunto_popup_text					= "Hai raggiunto il numero massimo di insegnamenti extracurriculari che puoi aggiungere."; 
+var _lbl_extra_aggiunto_popup_text							= "L'insegnamento è stato aggiunto al tuo profilo."; 
+var _lbl_extra_eliminato_popup_text							= "L'insegnamento è stato rimosso dal tuo profilo"; 
+var _lbl_quanti_extra_puoi_aggiungere						= "Puoi aggiungere al massimo %s insegnamenti extracurriculari."; 
+var _lbl_label_back_al_profilo								= "Ritorna ai dati del profilo"; 
+var _lbl_popup_aggiunta_extra_txt							= "Se aggiungi l'insegnamento al tuo profilo questo sarà visualizzabile all'interno della sezione &quot;Insegnamenti extra-curriculari&quot;."; 
+var _lbl_popup_elimina_extra_txt							= "Se elimini l'insegnamento dal tuo profilo saranno eliminate tutte le prenotazioni del posto in aula di quel insegnamento."; 
+var _lbl_popup_aggiunta_extra_txt_slot						= "Se aggiungi l'insegnamento al tuo profilo verranno eliminate tutte le prenotazioni future.<br>L'insegnamento sarà visualizzabile all'interno della sezione &quot;Insegnamenti extra-curriculari&quot;."; 
+var _lbl_popup_elimina_extra_txt_slot						= "Se elimini l'insegnamento dal tuo profilo saranno eliminate tutte le prenotazioni del posto in aula."; 
+var _lbl_conferma_operazione_e_torna						= "Conferma e ritorna ai dati del profilo"; 
+var _lbl_conferma_operazione_e_rimani						= "Conferma e rimani nella pagina"; 
+
+var _lbl_black_list_title									= "Nuova prenotazione (sospeso)"; 
+var _lbl_black_list_text									= "Il tuo account è stato momentaneamente sospeso.<br>Non potrai effettuare nuove prenotazioni fino a quando il tuo utente non verrà nuovamente abilitato."; 
+
+var _lbl_no_esami_da_a										= "Dalla data datefrom alla data dateto non sono presenti esami. Prova ad effettuare una nuova ricerca modificando il range di date."; 
+var _lbl_struttura_sede										= "Struttura/Sede"; 
+
+
+var _lbl_insegnamenti_extracurriculari_unipr     			= "Insegnamenti a libera scelta"; 
+var _lbl_insegnamenti_extracurriculari_text_unipr			= "Clicca per aprire o chiudere la tabella degli Insegnamenti a libera scelta del tuo profilo"; 
+var _lbl_titolo_tab_extra_aggiunti_unipr         			= "Insegnamenti a libera scelta del tuo profilo"; 
+var _lbl_popup_elimina_profilo_testo_extra_unipr			= "Eliminando il profilo, verranno eliminati tutti gli insegnamenti curriculari e a libera scelta che avevi aggiunto."; 
+var _lbl_aggiungi_insegnamenti_extra_unipr       			= "Aggiungi insegnamenti a libera scelta al tuo profilo"; 
+var _lbl_num_ins_extra_raggiunto_unipr           			= "Hai raggiunto il numero massimo di insegnamenti a libera scelta che puoi aggiungere."; 
+var _lbl_num_ins_extra_raggiunto_popup_text_unipr			= "Hai raggiunto il numero massimo di insegnamenti a libera scelta che puoi aggiungere."; 
+var _lbl_quanti_extra_puoi_aggiungere_unipr      			= "Puoi aggiungere al massimo %s insegnamenti a libera scelta."; 
+var _lbl_popup_aggiunta_extra_txt_unipr          			= "Se aggiungi l'insegnamento al tuo profilo questo sarà visualizzabile all'interno della sezione &quot;Insegnamenti ea libera scelta&quot;."; 
+var _lbl_popup_aggiunta_extra_txt_slot_unipr     			= "Se aggiungi l'insegnamento al tuo profilo verranno eliminate tutte le prenotazioni future.<br>L'insegnamento sarà visualizzabile all'interno della sezione &quot;Insegnamenti a libera scelta&quot;."; 
+
+var _lbl_apri_altra_tab_orario     							= "Apri un'altra TAB del browser per consultare l'orario di: "; 
+var _lbl_coockie_txt     									= "Questo sito utilizza un cookie tecnico per consentire la corretta navigazione. Confermando o proseguendo la navigazione accetti il suo utilizzo. Se vuoi saperne di più e leggere come disabilitarne l'uso, consulta l'<a href='%s_lang=it' target='_blank'>informativa estesa</a>."; 
+
+
+
+
+
+var loading_combo_html = 
+    '<div class="row"><div class="col-md-10">'+
+			'<div class="col-md-1" style="text-align:right;"><div class="loader" style="border-top: 10px solid '+color_bar+'; display:inline-block;"></div></div>&nbsp;<div class="col-md-3">' + _lbl_attendi_campi + '</div>' +
+		'</div></div>';
+var loading_main_html = 
+'<div class="row"><div class="col-md-10">'+
+		'<div class="col-md-1" style="text-align:right;"><div class="loader" style="border-top: 10px solid '+color_bar+'; display:inline-block;"></div></div>&nbsp;<div class="col-md-3">' + _lbl_attendi_contenuto + '</div>' +
+	'</div></div>';
+
+</script>
+
+
+
+
+<script type="text/javascript">var _lbl_popup_modifica_profilo_apertura_testo_slot = _lbl_popup_modifica_profilo_apertura_testo_slot_unifi;var _lbl_cosa_significa_gestisci = _lbl_cosa_significa_gestisci_unifi; var _lbl_cosa_significa_prenota = _lbl_cosa_significa_prenota_unifi;</script>			
+<script type="text/javascript">
+
+	var _lbl_corso_in_streaming 		= "corso erogato anche in streaming"; 
+	var _lbl_eter_legenda 				= ""; 
+	var _lbl_msg_scuole_no 				= "Gli orari delle lezioni non sono ancora stati pubblicati per i corsi di laurea di questa scuola."; 
+
+	var _lbl_titolo_area_EASYLESSON     = "Prenota il tuo posto a lezione"; 
+	var _lbl_prenotalezione             = "Prenota il tuo posto a lezione"; 
+	var _lbl_home_prenotalezione        = "Prenota il tuo posto a lezione"; 
+	var _lbl_titolo_pagina_prenota      = "Prenota il tuo posto a lezione"; 
+
+
+	function capitalizeFirstLetter(string) {
+	  return string.charAt(0).toUpperCase() + string.slice(1);
+	}
+
+
+
+
+
+</script>
+
+
+						<title>
+					Agenda Web | Università degli Studi di Firenze				</title>
+		
+
+		<script src="js/ricerca_globale.js"></script>
+
+			
+		<!-- <link href="css/main.css" rel="stylesheet" type="text/css"> -->
+
+		</head>
+
+		<body class="glossed">
+
+		<style>
+			.custom-color{
+				color: #004180 !important;
+			}
+			.custom-background-color{
+				background-color: #004180 !important;
+			}
+
+			.custom-btn-confirm{
+				background-color: #004180 !important;
+				color: #FFFFFF;
+				border: solid 1px #004180 !important;
+			}
+			.custom-btn-confirm:hover {
+				background-color: #FFFFFF !important;
+				color: #004180 !important;
+			}
+			.custom-btn-delete{
+				background-color: #DDDDDD !important;
+				color: #4b5159 !important;
+				border: solid 1px #DDDDDD !important;
+			}
+			.custom-btn-delete:hover {
+				background-color: #FFFFFF !important;
+			}
+			.custom-btn-service{
+				color: #004180 !important;
+				border: solid 1px #9c9a99 !important;
+				background-color: #f7f7f7 !important;
+			}
+			.custom-btn-service:hover {
+				background-color: #FFFFFF !important;
+			}
+			.custom-top-logo{
+				padding-left: 50px;
+				background-color:#004180;
+			}
+
+			.error-title{
+				color: #E12D32 !important;
+				font-size:200%;
+			}
+			.success-title{
+				color: green !important;
+				font-size:200%;
+			}
+			.neutral-title{
+				color: #4b5159 !important;
+				font-size:200%;
+			}
+			.custom-color-border-top{
+				border: solid 1px #004180 !important;
+			}
+
+
+
+			#main-content{
+				margin-left:35px;
+				background-color:#F2F2F2 !important;
+				position:relative;
+				padding-top: 150px;
+			}
+			@media (max-width: 768px) {
+				#main-content{
+					padding-left: 25px !important;
+					padding-right: 0px !important;
+					margin-left:0px;
+				}
+				#mobile-header{
+					margin-left:-25px;
+				}
+			}
+			
+			#bar-title{
+				padding-left: 70px !important;
+				z-index:1020;
+				background-color: #668BB1;
+				 padding-top:100px; ;
+			}
+			#titolo-area{
+				font-size: 20px;
+				padding-left: 20px; 
+				color: #FFFFFF; 
+			}
+
+			#all-wrapper{
+				background-color:#D9D9D9;
+				margin-left:0px;
+			}
+
+			.box-note{
+				border:1px solid #004180 !important;
+				background-color:#F2F2F2 !important;
+				color: #000000 !important;
+
+			}
+
+
+		
+		</style>
+
+		
+
+
+			<!-- skip al contenuto principale -->
+			<div id="skip-link"><a href="#main-content" class="skip-popup">Salta al contenuto principale</a></div>
+
+			 
+	
+	<!-- popup che compare dopo la ricerca -->
+	<div id="black" onclick="nascondiPopup();"></div>
+	<div id="cercaParola" class="popupmsg" style="border:1px solid #668BB1;">
+		<span id="testoRicerca"></span>
+		<br/>
+		<input type="button" name="annulla" id="btnAnnulla" class="btn btn-default btn-mostra popbtn" value="Annulla" onclick="nascondiPopup();" />
+		<input type="button" name="search" id="btnCerca" class="btn btn-default btn-mostra popbtn" value="Continua" onclick="RicercaGlobale('search');" />
+	</div>
+
+
+	<!-- contenuto principale -->
+	<div id="all-wrapper" class="all-wrapper fixed-header left-menu" >
+
+
+
+
+	<!--------------------------- Top logo --------------------------->
+	  		<div id="page-header" class="page-header hidden-print" >
+			<div class="top-logo custom-top-logo  hidden-print">
+				<div class="new-focus-lang" align="left" style="width:229px; display:inline-block;">
+										<a class="new-focus-lang hidden-xs" target="blanck" href="https://www.unifi.it/" title="Vai alla home page della tua università" >
+						<img id="img-logo" alt="Universit? degli Studi di Firenze" src="customer/logo.png"/>
+					</a>
+					
+				</div>
+
+				
+			<div class="login-top-page hidden-xs" style="display:inline-block;" >
+					<div id="auth_container" class="language hidden-print" align="right"><a class="new-focus-std main-menu-a"  title="Login" href="index.php?view=login&include=login&_lang=it"><i class="fa fa fa-user fa-3x" style="color:#668BB1"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				</div>			</div>
+		</div>
+
+	
+	<!--------------------------- Menu blu --------------------------->
+
+	    <div id="main-menu-container" class="side hidden-print"  >
+        <div id="main-menu" class="sidebar-wrapper hidden-print" style = "z-index:1021;background-color:#668BB1; padding-top:100px; ">
+            <ul>
+                                                    <li  class="new-focus-std main-menu-a"  id = "lk_home"> 
+                                        <a 	class="new-focus-std main-menu-a" 
+                                            title="Home page" 
+                                            href="index.php?view=home&_lang=it" 
+                                            data-toggle="tooltip" data-placement="right"
+                                        > 
+                                            <img alt="Home page" class="menu-icons" src="customer/menu_icons/Homepage.png"/>
+                                        </a>
+                                    </li>
+                                                                    <li  class="new-focus-std main-menu-a"  id = "lk_easycourse"> 
+                                        <a 	class="new-focus-std main-menu-a" 
+                                            title="Orari lezioni" 
+                                            href="index.php?view=easycourse&_lang=it" 
+                                            data-toggle="tooltip" data-placement="right"
+                                        > 
+                                            <img alt="Orari lezioni" class="menu-icons" src="customer/menu_icons/EasyCourse.png"/>
+                                        </a>
+                                    </li>
+                                                                    <li  class="new-focus-std main-menu-a"  id = "lk_rooms"> 
+                                        <a 	class="new-focus-std main-menu-a" 
+                                            title="Aule" 
+                                            href="index.php?view=rooms&include=rooms&_lang=it" 
+                                            data-toggle="tooltip" data-placement="right"
+                                        > 
+                                            <img alt="Aule" class="menu-icons" src="customer/menu_icons/EasyRoom.png"/>
+                                        </a>
+                                    </li>
+                                                                    <li  class="current" style = "background-color:#91ACC6;"  id = "lk_prenotalezione"> 
+                                        <a 	class="new-focus-std main-menu-a" 
+                                            title="Prenota il tuo posto a lezione" 
+                                            href="index.php?view=prenotalezione&include=prenotalezione_home&_lang=it" 
+                                            data-toggle="tooltip" data-placement="right"
+                                        > 
+                                            <img alt="Prenota il tuo posto a lezione" class="menu-icons" src="customer/menu_icons/PrenotaLezione.png"/>
+                                        </a>
+                                    </li>
+                                                                    <li  class="new-focus-std main-menu-a"  id = "lk_bookings"> 
+                                        <a 	class="new-focus-std main-menu-a" 
+                                            title="Cerca prenotazioni" 
+                                            href="index.php?view=bookings&include=bookings&_lang=it" 
+                                            data-toggle="tooltip" data-placement="right"
+                                        > 
+                                            <img alt="Cerca prenotazioni" class="menu-icons" src="customer/menu_icons/Bookings.png"/>
+                                        </a>
+                                    </li>
+                                                                <li id = "lk_planning"> 
+                                    <a 	class="new-focus-std main-menu-a" 
+                                        title="Prenotazione postazioni e servizi" 
+                                        href="https://kairos.unifi.it/portalePlanning/BIBL/" 
+                                        data-toggle="tooltip" data-placement="right"
+                                        target="_blank"
+                                    > 
+                                        <img alt="Prenotazione postazioni e servizi" class="menu-icons" src="customer/menu_icons/AuleStudio.png"/>
+                                    </a>
+                                </li>
+                                            </ul>
+        </div>
+    </div>
+
+
+
+
+
+	<!--------------------------- Menu-toggler e lingue --------------------------->
+	
+
+	<div id="bar-title" class="page-header hidden-print style-bar" >
+		
+					<h1 id="titolo-area"> Home page</h1>
+		
+		<div>
+			<div class="header-links hidden-print" >
+				<div id="language_container" class="language hidden-print">
+					<span class="lang_container" >&nbsp;&nbsp;<a class= "new-focus-lang link_language" style = "color:#FFFFFF; position:relative;" href="?view=prenotalezione&include=prenotalezione&_lang=it">italiano</a>&nbsp;&nbsp;</span><span class="lang_container" >&nbsp;&nbsp;<a class= "new-focus-lang link_language" style = "color:#FFFFFF; position:relative;" href="?view=prenotalezione&include=prenotalezione&_lang=en">english</a>&nbsp;&nbsp;</span><span class="lang_container" >&nbsp;&nbsp;<a class= "new-focus-lang link_language" style = "color:#FFFFFF; position:relative;" href="?view=prenotalezione&include=prenotalezione&_lang=es">español</a>&nbsp;&nbsp;</span>					<!-- ricerca globale -->
+										<span id="globalsearch_container">
+						<span id="search_label">
+							<label for="globalsearch" class="new-focus-lang"><img style="cursor:pointer;width:20px;" alt="Mostra/nascondi ricerca" title="Mostra/nascondi ricerca" src="customer/search.png" onclick="RicercaGlobale('show');"/></label>
+						</span>
+						<span id="search_input">
+							<input class="new-focus-std" type="text" id="globalsearch" name="globalsearch" placeholder="Ricerca" value="" onkeypress="intercettaInvio(event);" style="padding-left:8px; vertical-align:top;"/>
+							<input class="new-focus-std" type="button" id="btnsearch" value="Cerca" style="background-color:#FFFFFF; color:#004180; vertical-align:top;" onclick="generaTesto();"/>
+						</span>
+					</span>
+					<script>
+						if($( window ).width() < 1200){
+							$("#search_input").hide();
+						}
+					</script>
+										
+				</div>
+			</div>
+		</div>
+	</div>
+ 
+	<!--main content-->
+	
+	<link href  = "js/select2/css/select2.min.css" rel="stylesheet" />
+	<script src = "js/select2/js/select2.min.js"></script>
+	<script src = "js/jquery.form.js"></script>
+	<script src='assets/js/plugins/jquery.validate.min.js'></script>
+	<script src = "js/jquery.validate.js"></script>
+	<script src="js/scripts.js"></script>
+
+	
+
+
+	<div id="main-content" class="main-content">
+
+		<!--cookie-banner-->
+		
+
+				
+		<div id="browser-alert" style="display:none;"><div class="row alert alert-danger fade in"><h4>Attenzione!</h4><p>Il browser Internet Explorer non è supportato. Ti consigliamo di utilizzare Chrome, Firefox, Microsoft Edge o Vivaldi.</p></div></div>
+
+		<div id="mobile-header" class="hiddeen-lg"></div>
+
+		
+
+<script type="text/javascript">
+    if(title_page_customer_it == '') document.title = "Prenota il tuo posto a lezione | Università degli Studi di Firenze";
+	$("#titolo-area").html("Prenota il tuo posto a lezione");
+	if($(window).width() >= 768){
+		$("#menu-toggler").addClass("hidden");
+	}
+</script>
+<script src="pages/prenotalezione1.js"></script>
+
+
+
+<input value="prenotalezione" type="hidden" name="form-type" id="form-type"/>
+<input value="prenotalezione" type="hidden" name="view" id="view"/>
+<input value="prenotalezione" type="hidden" name="include" id="include"/>
+<input type="hidden" id="_lang" name="_lang" value= "it">
+
+
+
+	<div style="padding-top:10px;">
+		<div id="message-container" class="row alert alert-success alert-dismissable" style="width:100%;display:none;">
+			<div class="col-xs-2" style="width:30px"><i class="fa fa-check-circle"></i></div>
+			<div class="col-xs-10" id="message-container-text"></div>
+		</div>
+	</div>
+
+	<div id="breadcrumb" class="custom-breadcrumb">
+		<a href="index.php?view=prenotalezione&include=prenotalezione_home&_lang=it" class="custom-breadcrumb-small-link"><i class="fa fa-angle-double-left" aria-hidden="true"></i>&nbsp;Indietro</a><br>
+		<a href="index.php?view=prenotalezione&include=prenotalezione_home&_lang=it" class="custom-breadcrumb-title custom-color">Prenota il tuo posto a lezione</a>
+		<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+		<a href="index.php?view=prenotalezione&include=prenotalezione&_lang=it" class="custom-breadcrumb-subtitle">Nuova prenotazione</a>
+	</div>
+	<div id="prenotalezioni_avviso" class="explanation-text"><p>Di seguito l'elenco delle lezioni per le quali potrai prenotare il posto a lezione in aula; ricordiamo che le lezioni che si svolgono completamente a distanza non saranno riportate in elenco.</p><p>Per visualizzare l'orario completo delle tue lezioni della settimana odierna clicca su <a href='index.php?view=easycourse&_lang=it&include=corso' class='custom-color'><i class='fa fa-angle-double-right' aria-hidden='true'></i>&nbsp;Consulta il tuo orario</a></div>
+	
+
+	
+	<div id="prenotazioni_container"></div>
+
+	<div id="popup_conferma" class="mfp-hide white-popup">
+		<div id="popup_conferma_title" class="row popup-title-aulestudio"></div>
+		<div id="popup_conferma_sub_title" class="row" style="text-align:center;"></div>
+		<br>
+		<div id="popup_conferma_buttons_row" class="button-row"></div>
+	</div>
+
+	
+	<script>
+
+		$(document).ready(function ($) {
+			var lezioni_prenotabili = JSON.parse('[{"data":"01\/03\/2021","sede":"C.Didat.Morgagni (Piano Terra)","ora_inizio":"08:00","ora_fine":"14:00","qr":"","prenotazioni":[{"nome":"CALCOLO NUMERICO","ora_inizio":"08:30","ora_fine":"10:30","aula":"Aula 014","entry_id":130323,"last_minute":false,"capacita":47,"presenti":40,"prenotabile":true,"note":"","prenotata":true,"posto":0,"PresenzaAula":null,"PostoOccupato":null},{"nome":"FISICA II","ora_inizio":"10:50","ora_fine":"12:50","aula":"Aula 014","entry_id":130294,"last_minute":false,"capacita":47,"presenti":38,"prenotabile":true,"note":"","prenotata":true,"posto":0,"PresenzaAula":null,"PostoOccupato":null}],"timestamp":1614582000},{"data":"01\/03\/2021","sede":"C.Didat.Morgagni (1\u00b0 Piano)","ora_inizio":"14:00","ora_fine":"20:00","qr":"","prenotazioni":[{"nome":"ANALISI MATEMATICA II","ora_inizio":"14:20","ora_fine":"16:20","aula":"Auditorium B","entry_id":129941,"last_minute":false,"capacita":84,"presenti":84,"prenotabile":false,"note":"","prenotata":true,"posto":0,"PresenzaAula":null,"PostoOccupato":null}],"timestamp":1614603600},{"data":"02\/03\/2021","sede":"C.Didat.Morgagni (Piano Terra)","ora_inizio":"08:00","ora_fine":"14:00","qr":"","prenotazioni":[{"nome":"FISICA II","ora_inizio":"08:30","ora_fine":"10:30","aula":"Aula 014","entry_id":130308,"last_minute":false,"capacita":47,"presenti":38,"prenotabile":true,"note":"","prenotata":true,"posto":0,"PresenzaAula":null,"PostoOccupato":null},{"nome":"CALCOLO NUMERICO","ora_inizio":"10:50","ora_fine":"12:50","aula":"Aula 014","entry_id":130337,"last_minute":false,"capacita":47,"presenti":39,"prenotabile":true,"note":"","prenotata":true,"posto":0,"PresenzaAula":null,"PostoOccupato":null}],"timestamp":1614668400},{"data":"02\/03\/2021","sede":"C.Didat.Morgagni (Piano Terra)","ora_inizio":"14:00","ora_fine":"20:00","qr":"","prenotazioni":[{"nome":"FONDAMENTI DI INFORMATICA","ora_inizio":"14:10","ora_fine":"16:10","aula":"Auditorium A","entry_id":129969,"last_minute":false,"capacita":84,"presenti":84,"prenotabile":false,"note":"","prenotata":true,"posto":0,"PresenzaAula":null,"PostoOccupato":null}],"timestamp":1614690000},{"data":"04\/03\/2021","sede":"C.Didat.Morgagni (1\u00b0 Piano)","ora_inizio":"08:00","ora_fine":"14:00","qr":"","prenotazioni":[{"nome":"LABORATORIO DI INFORMATICA","ora_inizio":"10:40","ora_fine":"12:40","aula":"Aula Informatica 112 (la lezione si svolge anche nelle aule: Aula Informatica 113)","entry_id":133787,"last_minute":false,"capacita":20,"presenti":17,"prenotabile":true,"note":"","prenotata":false,"posto":0,"PresenzaAula":null,"PostoOccupato":null},{"nome":"LABORATORIO DI INFORMATICA","ora_inizio":"10:40","ora_fine":"12:40","aula":"Aula Informatica 113 (la lezione si svolge anche nelle aule: Aula Informatica 112)","entry_id":133788,"last_minute":false,"capacita":20,"presenti":20,"prenotabile":false,"note":"","prenotata":true,"posto":0,"PresenzaAula":null,"PostoOccupato":null}],"timestamp":1614841200},{"data":"04\/03\/2021","sede":"C.Didat.Morgagni (Piano Terra)","ora_inizio":"14:00","ora_fine":"20:00","qr":"","prenotazioni":[{"nome":"FONDAMENTI DI INFORMATICA","ora_inizio":"14:10","ora_fine":"16:10","aula":"Auditorium A","entry_id":129984,"last_minute":false,"capacita":84,"presenti":84,"prenotabile":false,"note":"","prenotata":true,"posto":0,"PresenzaAula":null,"PostoOccupato":null}],"timestamp":1614862800}]') ;
+			var empty_msg = 
+				'<span class="title-box-content-big custom-color">'+_lbl_nessuna_lezione_prenotabile+'</span>'+
+				'<br><br>'+
+				_lbl_nessuna_lezione_prenotabile_testo+
+				'<br><br>';
+			
+			var qr_codes_array = printPrenotazioni(lezioni_prenotabili, 'prenotazioni_container', '', '#004180', '7046719', empty_msg, 'prenota', '{"ControlloAccessi":"0","ControlloCapienzaAula":"1","ControlloOrePrenotateSettimana":"0","ControlloOreInsegnamentoPeriodoDidattico":"0","ControlloOreInsegnamentoSettimana":"0","ModalitaCalcolo":"1","PrenotazioneSlot":"0","PreavvisoPrenotazione":"7","IndicazionePosto":"0","TolleranzaIngresso":"15","RilevaPresenzaAula":"0","RilevaPostoAula":"0","InsegnamentiExtracurricolari":0,"ScadenzaDichiarazionePresenza":"15","MessaggioAppAgenda":"Se non lo hai gi\u00e0 fatto ti ricordiamo di eliminare il tuo profilo contenente gli insegnamenti del primo semestre; in seguito creane uno nuovo per gli insegnamenti del secondo semestre. Dopo questa operazione potrai prenotare il posto a lezione dal Luned\u00ec alle 00.01 al Sabato alle 23.59 per le lezioni che si terranno in presenza nella settimana seguente. Se non trovi il tuo corso di studi o un insegnamento, devi fare riferimento alla tua Scuola consultando <a href=https:\/\/www.unifi.it\/vp-9333-scuole.html>https:\/\/www.unifi.it\/vp-9333-scuole.html<\/a>","MessaggioAppAgendaDataUpdate":"2021-02-11","EasylessonPreavvisoCancellazione":""}', 'CCCNCL01M29A564I');
+
+		});
+
+	</script>
+
+	
+
+
+
+
+	
+		
+	</div>
+
+	
+
+
+	<script>
+		// Internet Explorer 6-11 -> non supportato
+		var isIE = /*@cc_on!@*/false || !!document.documentMode;
+		if(isIE)
+			$('#browser-alert').show();
+	
+	
+		$(document).ready(function(e) {
+			$('.input-datepicker').datepicker().on('changeDate', function (ev) {
+				calendario = false;
+				$('.datepicker').hide();
+				if( ! $(this).hasClass('no-submit') ) $('.main-form').submit();
+			});
+			
+			$('.input-group-addon').click(
+				function() {
+					var index = $('.input-group-addon').index( this );
+					$('.input-datepicker:eq('+index+')').trigger('focus');
+				}
+			);
+			
+			$('.from-datepicker').datepicker().on('changeDate', function (ev) {
+				var date_from = new Date($(this).datepicker('getDate'));
+				var date_to = new Date($('.to-datepicker').datepicker('getDate'));
+				
+				if(date_from.getDate() > date_to.getDate()){
+					var n_days = parseInt($(this).attr("data-to-datepicker-range"));
+					if(isNaN(n_days)) n_days = 1;
+					
+					date_to.setDate(date_from.getDate() + n_days);
+					$('.to-datepicker').datepicker("update", date_to);
+				}
+			});
+
+			$('.custom-popup-link').magnificPopup({
+				closeBtnInside:true
+			});
+			$('.toggler-element').click(function(){
+				var son_id = $(this).attr('data-son-id');
+				$('#'+son_id).toggle('slow');
+
+			});
+
+			
+		});
+		////
+		// -------------------------------------------------------------------- Script per la gestione del caso mobile
+		if($( window ).width() < 768){
+			// ri-organizzo la barra 
+			setMobileTopBar('index.php?view=home&_lang=it', '1', '', 'index.php?view=login&include=login&_lang=it', '<span class="lang_container" >&nbsp;&nbsp;<a class= "new-focus-lang link_language" style = "color:#FFFFFF; position:relative;" href="?view=prenotalezione&include=prenotalezione&_lang=it">it</a>&nbsp;</span><span class="lang_container" >&nbsp;&nbsp;<a class= "new-focus-lang link_language" style = "color:#FFFFFF; position:relative;" href="?view=prenotalezione&include=prenotalezione&_lang=en">en</a>&nbsp;</span><span class="lang_container" >&nbsp;&nbsp;<a class= "new-focus-lang link_language" style = "color:#FFFFFF; position:relative;" href="?view=prenotalezione&include=prenotalezione&_lang=es">es</a>&nbsp;</span>', 'Logout','Login');
+
+		}
+	
+	</script>
+
+
+
+	<!-- skip inizio pagina e al menu -->
+	<div id="skip-link-menu">
+		<a href="#main-menu" class="skip-popup">Vai al menu principale</a>
+	</div>
+
+	
+	<!-- Powered by EasyStaff -->
+	<div id="page-footer" class="page-footer hidden-print"  style="padding-left:65px;">
+				<a href="http://www.easystaff.it/" target="_blank" style="color:#333333;">Powered by EasyStaff - 2020</a>
+	</div>
+
+			
+
+
+</div>
+
+
+<script>
+	// Gestione della dimensione iniziale del sub menu
+	
+
+	if(typeof isBig === 'undefined') isBig = false;
+	var isBig = $(window).width() >= 768;
+
+	//dimensione del sottomenu
+	var dimension_sub_menu = 250;
+	var dimension_sub_menu_one = 250;
+	
+</script>
+
+
+
+<script src='assets/js/plugins/jquery.pnotify.js'></script>
+<script src='assets/js/plugins/jquery.sparkline.min.js'></script>
+<script src='assets/js/plugins/mwheelIntent.js'></script>
+<script src='assets/js/plugins/mousewheel.js'></script>
+<script src='assets/js/bootstrap/tab.js'></script>
+<script src='assets/js/bootstrap/dropdown.js'></script>
+<script src='assets/js/bootstrap/tooltip.js'></script>
+<script src='assets/js/bootstrap/collapse.js'></script>
+<script src='assets/js/bootstrap/transition.js'></script>
+<script src='assets/js/plugins/jquery.knob.js'></script>
+<script src='assets/js/plugins/jquery.flot.min.js'></script>
+<script src='assets/js/plugins/fullcalendar.js'></script>
+<script src='assets/js/plugins/datatables/datatables.min.js'></script>
+<script src='assets/js/plugins/chosen.jquery.min.js'></script>
+<script src='assets/js/plugins/jquery.timepicker.min.js'></script>
+<script src='assets/js/plugins/daterangepicker.js'></script>
+<script src='assets/js/plugins/colpick.js'></script>
+<script src='assets/js/plugins/moment.min.js'></script>
+<script src='assets/js/plugins/datatables/bootstrap.datatables.js'></script>
+<script src='assets/js/bootstrap/modal.js'></script>
+<script src='assets/js/plugins/raphael-min.js'></script>
+<script src='assets/js/plugins/morris-0.4.3.min.js'></script>
+<script src='assets/js/plugins/justgage.1.0.1.min.js'></script>
+<script src='assets/js/plugins/jquery.maskedinput.min.js'></script>
+<script src='assets/js/plugins/jquery.maskmoney.js'></script>
+<script src='assets/js/plugins/summernote.js'></script>
+<script src='assets/js/plugins/dropzone-amd-module.js'></script>
+<!-- <script src='assets/js/plugins/jquery.validate.min.js'></script> -->
+<script src='assets/js/plugins/jquery.bootstrap.wizard.min.js'></script>
+<script src='assets/js/plugins/jscrollpane.min.js'></script>
+
+<script src="js/magnificpopup/jquery.magnific-popup.js"></script>
+
+
+<!-- nuovo datepicker -->
+<link href="assets/css/plugins/bootstrap-datepicker.min.css" rel="stylesheet">
+<script src="assets/js/plugins/bootstrap-datepicker.min.js"></script>
+<script src="assets/js/plugins/bootstrap-datepicker.it.min.js"></script>
+<script src="assets/js/plugins/bootstrap-datepicker.es.min.js"></script>
+<script src="assets/js/plugins/bootstrap-datepicker.en-GB.min.js"></script>
+
+
+
+<!-- schedule
+<link href  = "js/select2/css/select2.min.css" rel="stylesheet" />
+<script src = "js/select2/js/select2.min.js"></script> -->
+
+<!-- <link href  = "assets/js/select2/css/select2.min.css" rel="stylesheet" />
+<script src = "assets/js/select2/js/select2.min.js"></script>
+
+<script src = "js/jquery.form.js"></script>
+<script src = "js/jquery.validate.js"></script> -->
+
+
+<script>
+	//portali presenti
+	var n_portali 	= '4';
+
+	//messaggio allegati
+	if(visualizza_allegati)
+		var label_message = _lbl_message_grid_allegato;
+	else 
+		var label_message = _lbl_message_grid;
+
+	if(university == 'UNIMI')
+		label_message = label_message + "<br/>In caso di ricerca nulla nel periodo didattico scelto, verificare i successivi.";
+
+
+	//descrizioni frecce next/prev week
+	
+	var main_url 		= "/agendaweb/index.php";
+	var language 		= "it";
+
+	//popup mappa
+	var mappa_assente	= "Mappa assente";
+
+	//valori spuntati della legenda
+
+	if('1')
+		var ar_codes_ = ("").split("|");
+	else
+		var ar_codes_ = [];
+
+	if('1')
+		var ar_select_ = ("").split("|");
+	else
+		var ar_select_ = [];
+
+	//export excel
+	var label_export_excel_button 		= "Export Excel";
+
+
+	//indica se si è o meno nella "vista calendario"
+	var calendario = false;
+	var portale_corrente = "prenotalezione";
+
+	if(legend_position == '') legend_position = 'bottom';
+
+
+
+	var empty_box 						= "0";
+	var col_cells 						= "0";
+	var all_events 						= "0";
+
+	//label prenotazioni ad elenco
+
+
+
+	var _lbl_message_note_event		= "<i class='fa fa-asterisk' aria-hidden></i> Un asterisco vicino al nome dell'evento può indicare la presenza di una nota. Cliccare sull'evento per visualizzarne il contenuto.";
+	if(visualizza_allegati)
+		var _lbl_message_note_event	= "<i class='fa fa-asterisk' aria-hidden></i> Un asterisco vicino al nome dell'evento può indicare la presenza di una nota, di un allegato o di un link. Cliccare sull'evento per visualizzarne il contenuto.";
+
+
+
+	/* if(visualizza_allegati){
+		var _lbl_vedi_note			= "<?php// echo $_lbl_vedi_note_o_allegati; ?>";
+			} */
+
+
+</script>
+
+
+
+<!-- @include _footer -->
+</body>
+</html>
