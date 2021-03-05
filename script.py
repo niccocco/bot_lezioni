@@ -258,16 +258,35 @@ for i in range(len(h)):
     for j in range(len(h[i]["prenotazioni"])):
         #print(h[i]["prenotazioni"][j])
         #print("AAAAAAA#######AAAAAAA\n")
-        if (h[i]["prenotazioni"][j]["prenotabile"]) and (h[i]["prenotazioni"][j]["prenotata"] is False) and (h[i]["prenotazioni"][j]["aula"] != "Aula Informatica 112 (la lezione si svolge anche nelle aule:Aula Informatica 112)"): # cioè se è prenotabile e non prenotata
-            
-            
-                       
+        if (h[i]["prenotazioni"][j]["prenotabile"]) and (h[i]["prenotazioni"][j]["prenotata"] is True) and (h[i]["prenotazioni"][j]["aula"] != "Aula Informatica 112 (la lezione si svolge anche nelle aule:Aula Informatica 112)"): # cioè se è prenotabile e non prenotata
             print(h[i]["prenotazioni"][j]["nome"] + " è prenotabile")
-            print(h[i]["prenotazioni"][j]["nome"] + "nell'aula: " + h[i]["prenotazioni"][j]["aula"])
-            ####abbiamo deciso che andremo nell'aula 113 a fare informatica perciò c'è un caso aggiuntivo:
+            print(h[i]["prenotazioni"][j]["nome"] + "nell'" + h[i]["prenotazioni"][j]["aula"])
+
+
+            #FACCIO EFFETTIVAMENTE LA PRENOTAZIONE
+            parametri = {'codice_fiscale': '', 'id_entries': ''}
+            id_lezione = h[i]['prenotazioni'][j]['entry_id']
+            id_entries_assemblato = '[' + str(id_lezione) + ']'
+            #print("##########" + id_entries_bello)
+            parametri['codice_fiscale'] = CODICE_FISCALE
+            parametri['id_entries'] = str(id_entries_assemblato)
+
+            print("Mi prenoto..")
+            risposta_prenotazione = requests.get(url=url_api_prenotazione, params=parametri, cookies=tutti_i_cookie, headers=headers,timeout=90)
+            
+            #print(risposta_prenotazione.reason)
+            #print(risposta_prenotazione.headers)
+            #print(risposta_prenotazione.content)
+            #print(risposta_prenotazione.url)
+
+                       
+            if "Prenotazione efettuata" in str(risposta_prenotazione.content): 
+                print("OK FATTO, prenotazione effettuata")
+            else: # per avere un messaggio di risposta più carino andrebbe deserializzato il json di risposta dell'API e non ho voglia 
+                print("Attenzione :renotazione non efettuata\nil motivo è: " + str(risposta_prenotazione.content))
             
 
-            print("prenotazione effettuata")
+            print("\n-----------------------\n")
 
         elif (h[i]["prenotazioni"][j]["prenotabile"]) and (h[i]["prenotazioni"][j]["prenotata"]):
             print("Attenzione: Hai già prenotato la lezione : " + h[i]["prenotazioni"][j]["nome"])
@@ -276,7 +295,7 @@ for i in range(len(h)):
         elif h[i]["prenotazioni"][j]["prenotabile"] is False:
             print("ATTENZIONE: La lezione " + h[i]["prenotazioni"][j]["nome"] + "\ndel giorno " + h[i]["data"] + ", non è prenotabile")
             print("molto probabilemnte i posti sono tutti finiti")
-            print("non posso farci nulla.\n-----------------------\n")
+            print("non posso farci nulla.\n\n-----------------------\n")
         else:
             print(h[i]["prenotazioni"][j]["nome"] + " è LA LEZIONE NON BUONA")
             print(h[i]["prenotazioni"][j]["aula"])
