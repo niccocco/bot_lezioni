@@ -1,0 +1,46 @@
+for g in giorni:
+
+    for j in range(len(lista_letta[g]["prenotazioni"])):
+        #print(lista_letta[numero_elementi]['prenotazioni'][numero_lezione]['entry_id'])
+        parametri = {'codice_fiscale': '', 'id_entries': ''}
+
+        # e.g. 129984
+        id_lezione = lista_letta[numero_elementi]['prenotazioni'][numero_lezione]['entry_id']
+        id_entries_bello = '[' + str(id_lezione) + ']'
+        #print("##########" + id_entries_bello)
+        parametri['codice_fiscale'] = CODICE_FISCALE
+        parametri['id_entries'] = str(id_entries_bello)
+        #print(parametri)
+        print("faccio")
+        risposta_prenotazione_ti_prego = requests.get(url=url_api_prenotazione, params=parametri, cookies=tutti_i_cookie, headers=headers,timeout=90)
+        print(risposta_prenotazione_ti_prego.reason)
+        print(risposta_prenotazione_ti_prego.headers)
+        print(risposta_prenotazione_ti_prego.content)
+        print(risposta_prenotazione_ti_prego.url)
+        print("merda")
+
+
+        if "Prenotazione efettuata" in str(risposta_prenotazione_ti_prego.content):
+            print("OK FATTO")
+        else:
+            print("prenotazione non efettuata\nil motivo è: " + str(risposta_prenotazione_ti_prego.content))
+        quit
+
+    print(lista_letta[numero_elementi]['prenotazioni'][0]['nome'])
+print(range(len(lista_letta)))
+
+
+
+###debug
+File_object = open("madonna.txt","w+")
+File_object.write(carmelo)
+
+#SUPER SGAMO BRUTTO
+File_object.close()
+
+
+
+h = open("madonna.txt", "r")
+lista_letta = h.read()
+lista_letta = json.loads(lista_letta)
+print("##" + h.readline(1) + "##")

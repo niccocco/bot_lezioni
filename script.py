@@ -1,7 +1,7 @@
 import json
 import requests
 import string
-from secrets import MATRICOLA, PASSWORD
+from secrets import MATRICOLA, PASSWORD, CODICE_FISCALE
 
 from lxml import html
 from bs4 import BeautifulSoup
@@ -15,7 +15,10 @@ import time
 import random
 
 
-CODICE_FISCALE = 'cccncl01m29a564i'
+#FIX TEMPORANEO PER FARLO ANDARE BISOGNA INSERIRE IL NUMERO DI GIORNI
+# IN CUI CI SI VUOLE PRENOTARE. Default = 6 (non so perchè)
+
+giorni = range(6)
 
 tempo_refresh_stallo = 60
 tentativi_acquisizione_lista = 0
@@ -113,7 +116,7 @@ def AcquisizioneBrowser(url_browser):
         pagina_raw = driver.page_source
         print("pagina acquisita")
 
-        return(pagina_raw)
+        return pagina_raw
 
 
 
@@ -152,6 +155,9 @@ def SpezzaEOttieniLaStringa(pagina_in_html):
     #print(lista_lezioni)
     print("la lista delle lezioni è lunga: " + str(len(lista_bella_delle_lezioni)))
 
+    print("""%%%%%%%%%%%%%%%%%%%%%%%%%""")
+    print(lista_bella_delle_lezioni)
+    print("""%%%%%%%%%%%%%%%%%%%%%%%%%""")
     if len(lista_bella_delle_lezioni) <= 5:
         print("ATTENZIONE!!!")
         print("la lista della prenotazione delle lezioni è vuota")
@@ -163,22 +169,23 @@ def SpezzaEOttieniLaStringa(pagina_in_html):
         if tentativi_acquisizione_lista > 100:
             print("il numero di tentativi è: " + str(tentativi_acquisizione_lista) + "\n mi ammazzo")
             exit()
+            
         else:
             pass
     else: 
         print("\n\n\nok la lista è abbastanza lunga")
         print("continuiamo") 
 
-    return(lista_bella_delle_lezioni)
+    
+    return lista_bella_delle_lezioni
 
 
 
 print("INIZIO\nchiamo la funzione di acquisizione dei dati dal browser")
 pagina_da_lavorare =  AcquisizioneBrowser(url_redirect)
 
-lista_lezioni_testo_sbagliato = SpezzaEOttieniLaStringa(pagina_da_lavorare)
 
-print(lista_lezioni_testo_sbagliato)
+
 ##########################################################
 #                    PARTE 3                             #
 ##        PRATICAMENTE INTERPRETO LA LISTA CHE HO       ##
@@ -188,30 +195,28 @@ print(lista_lezioni_testo_sbagliato)
 ##########################################################
 
 
-lista_lezioni_testo_sbagliato = lista_lezioni_testo_sbagliato.replace("true", "True")
-lista_lezioni_testo_sbagliato = lista_lezioni_testo_sbagliato.replace("false", "False")
-lista_lezioni_maiuscoleFatte = lista_lezioni_testo_sbagliato.replace("null", '""')
+
 
 
 #indent=4 CREDO CHE PERMETTA LO SGAMO CHE FARò DOPO
 print("Trasformo la stringa di lezioni in un oggetto JSON")
-lista_in_json = json.dumps(lista_lezioni_maiuscoleFatte, indent=4)
+
 print("ok.")
 print("Siccome l'interpretazione fa altamente schifo..\nOra devo riscrivere alcuni parametri in modo che siano\nlavorabili correttamente")
 
 
-print("ok.")
 
-print(lista_in_json)
+
+
 #ecco lo sgamo noto come il codice più stupido e ridondante che potessi creare
-lista_buona = json.loads(lista_in_json)
-
+#carmelo = json.loads(json.dumps(SpezzaEOttieniLaStringa(pagina_da_lavorare), indent=4))
+print("ok.")
 print("################################################################")
-print(lista_lezioni_maiuscoleFatte)
+print(SpezzaEOttieniLaStringa(pagina_da_lavorare))
 print("################################################################")
-lista_buona = lista_buona.replace("\\n", "")
-lista_buona = lista_buona.replace("\\r", "")
-lista_buona = lista_buona.strip('\\r\\n')
+#lista_buona = lista_buona.replace("\\n", "")
+#lista_buona = lista_buona.replace("\\r", "")
+#lista_bellissimissma = lista_buona.strip('\\r\\n')
 
 
 print("\n\n\n\n\n\nOttimo!\nadesso passo all'autoprenotazione delle lezioni")
@@ -220,7 +225,7 @@ print("\n\n\n\n\n\nOttimo!\nadesso passo all'autoprenotazione delle lezioni")
 
 
 
-print(lista_buona)
+#print(lista_buona)
 
 
 ###########################################
@@ -234,25 +239,46 @@ tutti_i_cookie[Cookie1_Name] = Cookie1_Value
 tutti_i_cookie[Cookie2_Name] = Cookie2_Value
 #print(tutti_i_cookie)
 
-print(len(lista_buona[0][0]))
 #Funzione che fa l'auto-prenotazione
-for numero_elementi in range(len(lista_buona)): 
-    for numero_lezione in range(len(lista_buona[numero_elementi]['prenotazioni'])):
-        print(lista_buona[numero_elementi]['prenotazioni'][numero_lezione]['entry_id'])
-        parametri = {'codice_fiscale': '', 'id_entries': ''}
-        
-        id_lezione = lista_buona[numero_elementi]['prenotazioni'][numero_lezione]['entry_id']
-        id_entries_bello = '[' + str(id_lezione) + ']' # e.g. 129984 --> [129984]
-        #print("##########" + id_entries_bello)
-        parametri['codice_fiscale'] = CODICE_FISCALE
-        parametri['id_entries'] = str(id_entries_bello)
-        print(parametri)
-        risposta_prenotazione_ti_prego = requests.get(url=url_api_prenotazione, params=parametri, cookies=tutti_i_cookie, headers=headers, timeout=50)
-        print(risposta_prenotazione_ti_prego.content)
 
-    print(lista_buona[numero_elementi]['prenotazioni'][0]['nome'])
+
+h = json.loads(SpezzaEOttieniLaStringa(pagina_da_lavorare))
+
+
+print(h[4]["prenotazioni"][1])
 
 
 
 
+#range(len(h))
+for i in range(len(h)):
+    #print("###################\nSono al giorno della settimana numero: " + str(h[i]["data"] + "\n"))
+    #print("#########")
+    #print(h[0]["prenotazioni"])
+    for j in range(len(h[i]["prenotazioni"])):
+        #print(h[i]["prenotazioni"][j])
+        #print("AAAAAAA#######AAAAAAA\n")
+        if (h[i]["prenotazioni"][j]["prenotabile"]) and (h[i]["prenotazioni"][j]["prenotata"] is False) and (h[i]["prenotazioni"][j]["aula"] != "Aula Informatica 112 (la lezione si svolge anche nelle aule:Aula Informatica 112)"): # cioè se è prenotabile e non prenotata
+            
+            
+                       
+            print(h[i]["prenotazioni"][j]["nome"] + " è prenotabile")
+            print(h[i]["prenotazioni"][j]["nome"] + "nell'aula: " + h[i]["prenotazioni"][j]["aula"])
+            ####abbiamo deciso che andremo nell'aula 113 a fare informatica perciò c'è un caso aggiuntivo:
+            
 
+            print("prenotazione effettuata")
+
+        elif (h[i]["prenotazioni"][j]["prenotabile"]) and (h[i]["prenotazioni"][j]["prenotata"]):
+            print("Attenzione: Hai già prenotato la lezione : " + h[i]["prenotazioni"][j]["nome"])
+            print("non posso farci nulla.\n-----------------------\n")
+
+        elif h[i]["prenotazioni"][j]["prenotabile"] is False:
+            print("ATTENZIONE: La lezione " + h[i]["prenotazioni"][j]["nome"] + "\ndel giorno " + h[i]["data"] + ", non è prenotabile")
+            print("molto probabilemnte i posti sono tutti finiti")
+            print("non posso farci nulla.\n-----------------------\n")
+        else:
+            print(h[i]["prenotazioni"][j]["nome"] + " è LA LEZIONE NON BUONA")
+            print(h[i]["prenotazioni"][j]["aula"])
+        #print("SONO FUORI DALL'IF")
+            
