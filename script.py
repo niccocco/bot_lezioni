@@ -42,7 +42,7 @@ headers = {
 
 
 
-
+print("Programma fatto male da Niccolo cocchi. Non ho nessuna responsabilità per usi del software")
 
 
 def AcquisizioneBrowser(url_browser):
@@ -60,6 +60,7 @@ def AcquisizioneBrowser(url_browser):
         global Cookie2_Name
         global Cookie2_Value
         
+       # driver.error_handler()
         
         
         driver.implicitly_wait(120)
@@ -247,7 +248,7 @@ h = json.loads(SpezzaEOttieniLaStringa(pagina_da_lavorare))
 
 print(h[4]["prenotazioni"][1])
 
-
+errore = ""
 
 
 #range(len(h))
@@ -300,4 +301,4 @@ for i in range(len(h)):
             print(h[i]["prenotazioni"][j]["nome"] + " è LA LEZIONE NON BUONA")
             print(h[i]["prenotazioni"][j]["aula"])
         #print("SONO FUORI DALL'IF")
-            
+print("Bella ho finito. Il risultato è stato: " + errore)

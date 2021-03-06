@@ -3,6 +3,7 @@
 - è necessario dichiarare quale webdriver usare nel codice e bisogna controllare che questo sia stato aggiunto a  ``` %PATH%  ```
   - [geckodriver](https://github.com/mozilla/geckodriver/releases) (per Firefox)
   - [chromedriver](https://chromedriver.chromium.org/downloads) (per Chrome)
+  - [Forse ci sono un briciolo di informazioni aggiuntive su questa pagina](https://www.selenium.dev/documentation/en/getting_started_with_webdriver/browsers/)
 
 
 ---
