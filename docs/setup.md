@@ -29,4 +29,12 @@ altrimenti tipo cerca un tutorial su gluglu percè mi fa fatica dirti che se hai
 
 (capisci che funziona guardando cosa ti viene scritto in console)(ovviamente devi andare nella cartella che hai creato (molto probabilmente involontariamente) clonando la repository)
 
-# ciao sono pigro e non ho finito di scrivere ciao
+# Attenzione: Lo script di per sè non autoprenota un bel niente!!
+
+Per "attivare" la funzione di autoprenotazione è necessario automatizzare l'esecuzione dello script python ad un certo momento nella giornata/settimana. Mentre su linux basta usare ad esempio ```crontab```, su windows bisogna ricorrere ad un piccolo sgamo:
+
+- crea un file batch (cioè che finisce con .bat) da qualche parte nel tuo computer
+- crea un piccolo script che faccia cambiare directory e successivamente esegua lo script python.
+Un esempio di questo è nel file esempio_auto.bat .
+  - **Nota** che devi cambiare i percorsi affinchè riflettano la tua situazione sul **tuo** pc
+- Accedere all'"utilità di pianificazione" e creare una nuova regola. Ma per questo conviene cercare un tutorial su google

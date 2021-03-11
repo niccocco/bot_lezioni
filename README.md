@@ -1,15 +1,21 @@
 # LOGIN AUTOMATICO E AUTOPRENOTAZIONE LEZIONI SU KAIROS
 
-------
+---------
 
-# Setup: [Setup](docs/setup.md)
+# Per la configurazione guarda: [setup](docs/setup.md)
 
 ## Stato corrente:
-   - FUNZIONA quasi tutto
-   - l'unica cosa che manca da implementare è la funzione di autoretry nel caso in cuii il sito non funzioni
-   - Implementato login tramite selenium (simulazione del browser)
-   - I cookies della sessione Shibboleth vengono correttamente acquisiti
-   - 
+   
+   - Lo script agisce in 6 fasi:
+      1. Autologin su kairos mediante emulazione del browser tramite [Selenium](https://www.selenium.dev/documentation/en/) 
+      2. Acquisizione di tutta la pagina html e dei cookie presenti
+      3. Reformattazione della pagina contenente tutte le prenotazioni per estrapolare una stringa json trattabile in python
+      4. Acquisizione della stringa in formato Json
+      5. due cicli ```for``` passano in esame tutte le possibili lezioni prenotabili e per ognuna di queste
+      6. Viene fatta una richiesta all'API (non pubblico) di kairos che effettua effettivamente la prenotazione.
 
-## TODO: 
-vedi [note](docs/note.md)
+---
+
+## Cose che mancano/cosa succede: 
+
+[note](docs/note.md)
