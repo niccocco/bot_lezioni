@@ -246,7 +246,6 @@ tutti_i_cookie[Cookie2_Name] = Cookie2_Value
 h = json.loads(SpezzaEOttieniLaStringa(pagina_da_lavorare))
 
 
-print(h[4]["prenotazioni"][1])
 
 errore = ""
 
