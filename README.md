@@ -1,5 +1,6 @@
 # Script per prenotarsi in automatico alle lezioni in presenza su kairos
 
+## ⚠️⚠️⚠️ lo script potrebbe smettere di funzionare da un momento all'altro senza preavviso, specie se cambiano le politiche di login da Ottobre ⚠️⚠️⚠️
 
 ## 🔧 Per configurare lo script: [setup](docs/setup.md)
 
@@ -14,6 +15,8 @@
 
 ---
 
-## Cose che mancano/cosa succede: 
+## ❔ Cose che mancano/cosa succede: 
+💻 [note](docs/note.md)
 
-[note](docs/note.md)
+# ❗️❗️Disclaimer:
+Fate quello che vi pare ma non rompete perchè non sono responsabile se per qualche motivo il vostro ip viene bannato per spam di richieste o non riuscite a prenotarvi in tempo perchè il programma non è partito in tempo per la corsa di lunedì a mezzanotte e quindi tutti i posti sono già finiti.
