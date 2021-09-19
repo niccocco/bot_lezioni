@@ -6,16 +6,34 @@ geckodriver.log
 .vscode
 .vscode/
 kairos.unifi.it.har
-# Byte-compiled / optimized / DLL files
 __pycache__/
 test_vari/
+mqqt_test/
+test_vari/test_untitled.py
+prenotami.bat
+robaAPI/*
+cosonuovo.html
+ListaLezioni.html
+logBrutto.txt
+
+#possibili file temporanei che si potrebbero creare durante il debug:
+dump.script.html
+lezioni.json
+pagina.html
+paginaLezioni.html
+scriptRequests.py
+
+
+# Byte-compiled / optimized / DLL files
+
 *.py[cod]
 *$py.class
-mqqt_test/
-test_vari\test_untitled.py
+
+
+
 # C extensions
 *.so
-prenotami.bat
+
 # Distribution / packaging
 
 .Python
@@ -147,3 +165,4 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+secret.py
