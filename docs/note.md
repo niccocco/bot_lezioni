@@ -7,8 +7,6 @@
 - ✔️ Funziona tutto con requests
 - ✔️ Diversi algoritmi di protezione da eccezioni di connessione/errori di conversione vari (da testare più a fondo)
 
-Allora il procedimento con il quale questo programma funziona è abbastanza semplice e probabilmente non è neanche il modo più veloce/efficiente (vedi cose da fare)
-
 
 ## Cose da fare:
 
