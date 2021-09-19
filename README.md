@@ -1,21 +1,18 @@
 # Script per prenotarsi in automatico alle lezioni in presenza su kairos
 
-## ⚠️⚠️⚠️ lo script potrebbe smettere di funzionare da un momento all'altro senza preavviso, specie se cambiano le politiche di login da Ottobre ⚠️⚠️⚠️
+## ⚠️ lo script potrebbe smettere di funzionare da un momento all'altro senza preavviso, specie se cambiano le politiche di login da Ottobre ⚠️
 
 ## 🔧 Per configurare lo script: [setup](docs/setup.md)
 
 ## Stato corrente:
-   
-   - Lo script agisce in 5 fasi:
-      1. Autologin su kairos mediante emulazione del browser con [Selenium](https://www.selenium.dev/documentation/en/) 
-      2. Scrape di tutta la pagina html e dei cookie presenti
-      3. Reformattazione della pagina contenente tutte le prenotazioni per estrapolare una stringa json
-      4. Acquisizione della stringa
-      5. Richiesta a kairos di prenotarsi per ciascun giorno uno dopo l'altro
-
+   - Lo script controlla la presenza del token di accesso (che non è altro che una serie di parametri in formato JSON codificati in BASE64)
+   - controlla la connessione a kairos, (ed eventualmente) a google
+   - se non è mai stato effettuato il login, lo effettua e salva il token di accesso nel file [secret.py](/secret.py)
+   - procede ad ottenere la lista delle lezioni
+   - prenota le lezioni 
 ---
 
-## ❔ Cose che mancano/cosa succede: 
+## ❔ Progressi/nuove funzioni: 
 💻 [note](docs/note.md)
 
 # ❗️❗️Disclaimer:
