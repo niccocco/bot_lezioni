@@ -9,7 +9,7 @@
 4. Installare i moduli di python necessari facendo (aprendo un terminale nella cartella del bot) ```pip install -r requirements.txt```
 5. provare a far partire lo script usando ```prenotami.bat``` se tutto va bene a schermo comparirà il log del programma. Se non sono presenti errori dovrebbe tentare di prenotare i posti. A questo punto potete chiudere il programma facendo la combinazione di tasti ```Control + C```
 6. Apri il file ```esempio_auto.bat``` e modifica la prima linea (la parte tra <>) e scrivi il percorso per la cartella estratta.
-7. Prova a far partire il programma per controllare se hai fatto gotto per bene
+7. Prova a far partire il programma per controllare se hai fatto tutto per bene
 
 ## Aggiungere ```prenotami.bat``` all'unità di pianificazione (su windows):
 - guarda su internet
