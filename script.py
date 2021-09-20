@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import sys, time, requests, json
+from bs4.element import PYTHON_SPECIFIC_ENCODINGS
 from os import error, linesep
 
 from secret import MATRICOLA, PASSWORD, CODICE_FISCALE
@@ -12,6 +13,7 @@ lineaTokenContenuta = "TOKEN"
 secretsFile = open("secret.py", "r")
 lineeSecrets = secretsFile.readlines()
 tokenSalvato = False
+secretsFile.close()
 
 for linea in lineeSecrets:
     if lineaTokenContenuta in linea:
@@ -71,7 +73,7 @@ class kairosBot():
         self.internetOn = False  # serve per evitare di ricontrollare la connessione ad internet se quest controllo è già stato eseguito con successo
         self.isGoogleOnline = False  # serve per vedere se il pc è connesso ad internet
         
-        self.secondiKairos = 20 # tempo tra un tentativo e l'altro
+        self.secondiKairos = 60 # tempo tra un tentativo e l'altro
         self.secondiGoogle = 20
 
         self.dataLogin = {
@@ -103,7 +105,7 @@ class kairosBot():
     def inizio(self):
 
         self.__init__
-        pass
+
 
     def controlloInternet(self, sitoOn):
         """Controlla se il sito è online, altrimenti spregiudica la possibilità che il pc non sia connesso ad internet e aspetto finchè """
@@ -112,6 +114,8 @@ class kairosBot():
         while self.sitoOn == False:
             try:
                 printLivelli("Provo a contattare kairos", 4)
+                sys.stdout.flush()
+
                 kairosHead = requests.head(
                     url="https://kairos.unifi.it",
                     timeout=(10, 20))  #10s di timeout sono più che sufficienti
@@ -173,7 +177,11 @@ class kairosBot():
                 printLivelli("---------------------------------", livello=2)
 
                 printLivelli("Riprovo tra {} secondi".format(self.secondiKairos),0)
-                
+                for s in range(self.secondiKairos): # controllo visivo che il programma stia circa funzionando
+                    print(".", end=" ")
+                    sys.stdout.flush()
+                    time.sleep(1)
+
                 time.sleep(self.secondiKairos)
                 self.sitoOn = False
 
@@ -284,8 +292,10 @@ class kairosBot():
 
             # intanto controllo che (anche se molto difficile) il token non sia già stato scritto
             #e poi me ne frego e sovrascrivo quello che c'è scritto
-            #lineeSecrets = secretsFile.readlines()
-            secretsFile = open("secret.py", "w")
+            
+            secretsFile = open("secret.py", "r")
+            lineeSecrets = secretsFile.readlines()
+            secretsFile.close()
             lineaTrovata = False
             i = 0
             while lineaTrovata == False:
@@ -311,11 +321,12 @@ class kairosBot():
                         0)
                     #aggiungo io la linea corretta
                     secretsFile.close()
-                    secretsFile = open("secret.py", "a")
-                    secretsFile.write("\n")
-                    secretsFile.write("{} = '{}'".format(
-                        lineaTokenContenuta, access_token))
-                    secretsFile.close()
+                    with open("secret.py", "a") as f:
+
+                        f.write(" \n")
+                        f.write("{} = '{}'".format(lineaTokenContenuta, access_token))
+                        f.close()
+
                     lineaTrovata = True
 
             self.access_token = access_token  #serve per quando TOKEN non è mai stato salvato o se è cambiato
@@ -450,7 +461,7 @@ class kairosBot():
                             printLivelli("Sto prenotando: {}".format(lezione["nome"]))
                             entry_id = lezione["entry_id"]
                             urlPrenotazione = urlPrenotazione.format(CODICE_FISCALE, entry_id)
-                            rispostaPrenotazione = requests.get(url=urlPrenotazione)
+                            rispostaPrenotazione = requests.get(url=urlPrenotazione) # qua non c'è timeout perchè è importante che li faccia tutti
                             rispostaJSON = json.loads(rispostaPrenotazione)
                             esito = rispostaJSON['result']
                             motivo = rispostaJSON['message']

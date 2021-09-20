@@ -15,6 +15,9 @@ robaAPI/*
 cosonuovo.html
 ListaLezioni.html
 logBrutto.txt
+robina.py
+#secret.py
+provaAppend.py
 
 #possibili file temporanei che si potrebbero creare durante il debug:
 dump.script.html
