@@ -2,6 +2,8 @@
 
 ## ⚠️ lo script potrebbe smettere di funzionare da un momento all'altro senza preavviso, specie se cambiano le politiche di login da Ottobre ⚠️
 
+### Kairos non funziona? Non vuoi restare sveglio domenica notte perchè il giorno dopo hai lezione? Questa potrebbe essere una soluzione per te!
+
 ## 🔧 Per configurare lo script: [setup](docs/setup.md)
 
 ## Stato corrente:
