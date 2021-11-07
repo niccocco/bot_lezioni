@@ -50,7 +50,6 @@ headers = {
 tempo_refresh_stallo = 60
 
 url_redirect = "https://kairos.unifi.it/auth/auth_app_test.php?response_type=token&client_id=client&redirect_uri=https://kairos.unifi.it/agendaweb/index.php%3Fview=login&scope=openid+profile"
-urlPrenotazione = "https://kairos.unifi.it/agendaweb/call_ajax.php?mode=salva_prenotazioni&codice_fiscale={}}&id_entries=[{}}]"
 
 
 
@@ -65,6 +64,7 @@ class kairosBot():
         prenotaPlis() permette di automatizzare il processo di prenotazione vero e proprio """
     def __init__(self) -> None:
         print("ciao")
+        self.urlPrenotazione = "https://kairos.unifi.it/agendaweb/call_ajax.php?mode=salva_prenotazioni&codice_fiscale={}&id_entries=[{}]"
 
         #variabili utili:
         self.tentativiKairos = 0  # counter dei tentativi di contatto di kairos
@@ -357,15 +357,20 @@ class kairosBot():
             tokenAccess = {}
             tokenAccess["access_token"] = self.access_token
             printLivelli("Log-in..", 4)
-            reqPrenota.post(
+            print(tokenAccess)
+            #ottengo i cookie necessari insieme all'autorizzazione
+            miao = reqPrenota.post(
                 "https://kairos.unifi.it/agendaweb/login.php?from=&from_include=",
                 data=tokenAccess)
-
+            print(reqPrenota.cookies)
+            print(miao.cookies)
             printLivelli("ok", 1)
 
             paginaLezioni = reqPrenota.get(
                 "https://kairos.unifi.it/agendaweb/index.php?view=prenotalezione&include=prenotalezione&_lang=it", headers=headers
             )
+
+            print(paginaLezioni.cookies)
 
             printLivelli("ok", 1)
             printLivelli(paginaLezioni.status_code, 2)
@@ -460,9 +465,14 @@ class kairosBot():
                         if (lezione["prenotata"] == False) and (lezione["prenotabile"] == True):
                             printLivelli("Sto prenotando: {}".format(lezione["nome"]))
                             entry_id = lezione["entry_id"]
-                            urlPrenotazione = urlPrenotazione.format(CODICE_FISCALE, entry_id)
-                            rispostaPrenotazione = requests.get(url=urlPrenotazione) # qua non c'è timeout perchè è importante che li faccia tutti
-                            rispostaJSON = json.loads(rispostaPrenotazione)
+                            urlPrenotazione = self.urlPrenotazione.format(CODICE_FISCALE, entry_id)
+                            rispostaPrenotazione = reqPrenota.get(url=urlPrenotazione) # qua non c'è timeout perchè è importante che li faccia tutti
+                            print(urlPrenotazione)
+                            print(rispostaPrenotazione.content)
+                            print(rispostaPrenotazione.encoding)
+                            print(rispostaPrenotazione.text)
+
+                            rispostaJSON = json.loads(rispostaPrenotazione.content)
                             esito = rispostaJSON['result']
                             motivo = rispostaJSON['message']
                             if esito == "Success":
@@ -487,7 +497,7 @@ class kairosBot():
                     except error:
                         printLivelli("Si è verificato un errore strano nella prenotazione della lezione", 3)
                         printLivelli(error.args,  2)
-                        pass
+
                     printLivelli("")
                     
                     
@@ -503,6 +513,7 @@ class kairosBot():
                 raise erroreRispostaPrenotazione("scemo")
             pass
         except erroreRispostaPrenotazione:  #sono da chiamare con raise erroreRispostaPrenotazione(listaErrori)
+            #TODO: gestione errore
             pass
         except error as er:
             # qua ci sono dei classici errori di rete, perciò nel dubbio:
