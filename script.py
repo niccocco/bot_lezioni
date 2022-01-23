@@ -435,14 +435,16 @@ class kairosBot():
                 printLivelli("ATTENZIONE!!! la lista della prenotazione delle lezioni è vuota")
                 time.sleep(10)
                 tentativo += 1
-                self.prenota(tentativo)
-                if tentativo > 100:
+                
+                if tentativo > 4:
                     print("il numero di tentativi è: " +
                           str(tentativo) + " mi ammazzo")
                     exit()
 
                 else:
-                    pass
+                    printLivelli("tentativo numero: " + str(tentativo),0)
+                    self.prenota(tentativo)
+                    
             else:
                 printLivelli("ok la lista è abbastanza lunga", 1)
 
